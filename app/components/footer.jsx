@@ -38,12 +38,8 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/community"
-                      className="hover:underline"
-                      target="_blank"
-                    >
-                      COMMUNITY INITIATIVES
+                    <Link href="/" className="hover:underline" target="_blank">
+                      Packages/Buy
                     </Link>
                   </li>
                   <li>
