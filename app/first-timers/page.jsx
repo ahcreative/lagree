@@ -136,7 +136,7 @@ const FirstTimers = () => {
             {/* Image container */}
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <Image
-                src="/getstarted.jpg"
+                src="/about3.jpg"
                 alt="Lagree fitness"
                 className="object-cover w-full"
                 width={500}

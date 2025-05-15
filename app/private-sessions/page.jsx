@@ -37,7 +37,7 @@ const Community = () => {
           {/* Image container - Full width on mobile, half width on larger screens */}
           <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">
             <Image
-              src="/getstarted.jpg"
+              src="/about2.jpg"
               alt="Lagree fitness"
               className="object-cover"
               width={500}

@@ -349,7 +349,7 @@ const Community = () => {
             {/* Image container - Full width on mobile, half on desktop */}
             <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">
               <Image
-                src="/getstarted.jpg"
+                src="/about1.jpg"
                 alt="Lagree fitness"
                 className="object-cover w-full h-auto max-w-sm md:max-w-none"
                 width={500}
@@ -364,7 +364,7 @@ const Community = () => {
                 </p>
 
                 <p className="text-base md:text-lg text-white">
-                  The Sweat for a Cause classes at Lagree West increase
+                  The Sweat for a Cause classes at Lagree Eliteform increase
                   accessibility, build relationships, and give back to our
                   community. Each quarter, we will partner with an organization
                   or cause related to diversity, equity, and inclusion, women's

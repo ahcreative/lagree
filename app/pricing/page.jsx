@@ -45,16 +45,6 @@ const FirstTimers = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleBookClick = (e) => {
-    e.preventDefault();
-    setBookSubmenuState("region");
-  };
-
-  const selectRegion = (region) => {
-    setSelectedRegion(region);
-    setBookSubmenuState("location");
-  };
-
   const selectLocation = (location) => {
     setSelectedLocation(location);
     setBookSubmenuState("actions");
@@ -64,8 +54,18 @@ const FirstTimers = () => {
     setBookSubmenuState("region");
   };
 
+  const handleBookClick = (e) => {
+    e.preventDefault();
+    setBookSubmenuState("region");
+  };
+
+  const selectRegion = (region) => {
+    setSelectedRegion(region);
+    setBookSubmenuState("actions");
+  };
+
   const backToLocation = () => {
-    setBookSubmenuState("location");
+    setBookSubmenuState("region");
   };
 
   const renderSubmenu = () => {
@@ -81,30 +81,6 @@ const FirstTimers = () => {
           </button>
         </div>
       );
-    } else if (bookSubmenuState === "location") {
-      return (
-        <div className="absolute   flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px]  p-5 ">
-          <button
-            onClick={backToRegion}
-            className="flex items-center text-gray-400 text-sm  mb-3 "
-          >
-            <ChevronLeft size={16} className="mr-1" />
-            Back to region
-          </button>
-          <h3 className="text-sm font-black mb-3">Choose Location:</h3>
-          {["Gastown", "Kitsilano", "Lonsdale", "Main St", "Yaletown"].map(
-            (location) => (
-              <button
-                key={location}
-                onClick={() => selectLocation(location)}
-                className="w-full text-center  bg-black text-white mb-2 px-8 py-4"
-              >
-                {location}
-              </button>
-            )
-          )}
-        </div>
-      );
     } else if (bookSubmenuState === "actions") {
       return (
         <div className="absolute   flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px]  p-5 ">
@@ -115,7 +91,7 @@ const FirstTimers = () => {
             <ChevronLeft size={16} className="mr-1" />
             Back to location
           </button>
-          <h3 className=" text-sm font-black mb-3">{selectedLocation}:</h3>
+          <h3 className=" text-sm font-black mb-3">Vancouver:</h3>
           <a
             href={`/schedule/${selectedLocation}`}
             className="block w-full text-center  bg-black text-white mb-2 px-14 py-4"
@@ -149,30 +125,6 @@ const FirstTimers = () => {
           </button>
         </div>
       );
-    } else if (bookSubmenuState === "location") {
-      return (
-        <div className="mt-4 flex flex-col items-center space-y-4">
-          <button
-            onClick={backToRegion}
-            className="flex items-center text-white text-sm font-medium hover:text-gray-300"
-          >
-            <ChevronLeft size={16} className="mr-1" />
-            Back to region
-          </button>
-          <h3 className="text-white text-sm font-medium">Choose Location</h3>
-          {["Gastown", "Kitsilano", "Lonsdale", "Main St", "Yaletown"].map(
-            (location) => (
-              <button
-                key={location}
-                onClick={() => selectLocation(location)}
-                className="text-white bg-gray-800 hover:bg-gray-700 p-2 rounded w-48 transition"
-              >
-                {location}
-              </button>
-            )
-          )}
-        </div>
-      );
     } else if (bookSubmenuState === "actions") {
       return (
         <div className="mt-4 flex flex-col items-center space-y-4">
@@ -185,13 +137,13 @@ const FirstTimers = () => {
           </button>
           <h3 className="text-white text-sm font-medium">{selectedLocation}</h3>
           <a
-            href={`/book/${selectedRegion}/${selectedLocation}`}
+            href={`/schedule`}
             className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded w-48 transition"
           >
             Book Now
           </a>
           <a
-            href={`/buy/${selectedRegion}/${selectedLocation}`}
+            href={`/pricing`}
             className="text-white bg-green-600 hover:bg-green-700 p-2 rounded w-48 transition"
           >
             Buy Now
@@ -228,8 +180,8 @@ const FirstTimers = () => {
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link href={"/"}>
-                <div className="flex gap-2 items-center ">
-                  <img src="/icon.png" className="h-14 md:h-18 " alt="" />
+                <div className="flex gap-2 items-center">
+                  <img src="/icon.png" className="h-14 md:h-18" alt="" />
                   <img src="/logo.png" className="h-14 md:h-18" alt="" />
                 </div>
               </Link>
@@ -258,12 +210,7 @@ const FirstTimers = () => {
                 >
                   Why lagree?
                 </a>
-                <a
-                  href="/studiopolicies"
-                  className="text-white hover:text-gray-300 transition"
-                >
-                  Studio Policies
-                </a>
+
                 <a
                   href="/mobileapp"
                   className="text-white hover:text-gray-300 transition"
@@ -272,11 +219,11 @@ const FirstTimers = () => {
                 </a>
               </div>
 
-              {/* Mobile Menu Button */}
+              {/* Mobile Menu Button - Always positioned here */}
               <div className="md:hidden">
                 <button
                   onClick={toggleMobileMenu}
-                  className="text-white focus:outline-none"
+                  className="text-white focus:outline-none z-[100] relative"
                 >
                   {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -284,9 +231,9 @@ const FirstTimers = () => {
             </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu - separated from the button */}
           {isMobileMenuOpen && (
-            <div className="md:hidden fixed inset-0 bg-black bg-opacity-20 z-50 pt-20">
+            <div className="md:hidden fixed inset-0 bg-black z-40 pt-[100px]">
               <div className="flex flex-col items-center space-y-8 p-4">
                 <a
                   href="/login-account"

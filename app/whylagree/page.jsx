@@ -181,41 +181,6 @@ const About = () => {
       </div>
 
       <div className="bg-black py-16 md:py-28">
-        <div className="container flex flex-col md:flex-row justify-center gap-7 px-4 sm:px-8 md:px-16 lg:px-28">
-          <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2">
-            <div className="flex flex-col gap-6 md:gap-10">
-              <p className="text-lg md:text-xl">The Science</p>
-              <h1 className="font-bold text-3xl md:text-5xl">
-                We target your slow-twitch <br className="hidden md:block" />{" "}
-                muscle fibers.
-              </h1>
-              <p className="text-base md:text-lg">
-                Activating slow-twitch muscle fibres builds lean muscle mass,
-                boosting metabolism <br className="hidden md:block" /> for up to
-                24 hours post-class.
-              </p>
-
-              <p className="text-base md:text-lg">
-                Patented equipment uses variable resistance and your own body
-                weight to target <br className="hidden md:block" /> slow-twitch
-                fibres, keeping muscles challenged and preventing plateaus.
-              </p>
-            </div>
-          </div>
-          {/* Right section - Image container */}
-          <div className="w-full md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
-            <Image
-              src="/about2.jpg"
-              alt="Lagree fitness"
-              className="object-cover"
-              width={500}
-              height={200}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-black py-16 md:py-28">
         <div className="flex flex-col md:flex-row justify-start px-4 sm:px-6 md:px-10">
           {/* Image container */}
           <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">

@@ -1,22 +1,3 @@
-// import React from "react";
-
-// function Header() {
-//   return (
-//     <nav
-//       className={` top-0 left-0 right-0 bg-black z-50 py-3 h-[100px] flex justify-center items-center transition-all duration-300
-//       `}
-//     >
-//       <div className="container flex gap-2  mx-auto ">
-//         <img src="/icon.png" className="h-14 md:h-18  ml-7 block " alt="" />
-
-//         <img src="/logo.png" className="h-14 md:h-18  block " alt="" />
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Header;
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronLeft } from "lucide-react";
@@ -68,79 +49,46 @@ function Header() {
 
   const selectRegion = (region) => {
     setSelectedRegion(region);
-    setBookSubmenuState("location");
-  };
-
-  const selectLocation = (location) => {
-    setSelectedLocation(location);
     setBookSubmenuState("actions");
   };
 
-  const backToRegion = () => {
-    setBookSubmenuState("region");
-  };
-
   const backToLocation = () => {
-    setBookSubmenuState("location");
+    setBookSubmenuState("region");
   };
 
   const renderSubmenu = () => {
     if (bookSubmenuState === "region") {
       return (
-        <div className="absolute   flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px]  p-5  ">
-          <h3 className=" text-lg font-bold mb-3">Choose Region:</h3>
+        <div className="absolute flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px] p-5">
+          <h3 className="text-lg font-bold mb-3">Choose Region:</h3>
           <button
             onClick={() => selectRegion("Vancouver")}
-            className="w-full text-center  bg-black text-white  px-8 py-4 "
+            className="w-full text-center bg-black text-white px-8 py-4"
           >
             Vancouver
           </button>
         </div>
       );
-    } else if (bookSubmenuState === "location") {
-      return (
-        <div className="absolute   flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px]  p-5 ">
-          <button
-            onClick={backToRegion}
-            className="flex items-center text-gray-400 text-sm  mb-3 "
-          >
-            <ChevronLeft size={16} className="mr-1" />
-            Back to region
-          </button>
-          <h3 className="text-sm font-black mb-3">Choose Location:</h3>
-          {["Gastown", "Kitsilano", "Lonsdale", "Main St", "Yaletown"].map(
-            (location) => (
-              <button
-                key={location}
-                onClick={() => selectLocation(location)}
-                className="w-full text-center  bg-black text-white mb-2 px-8 py-4"
-              >
-                {location}
-              </button>
-            )
-          )}
-        </div>
-      );
     } else if (bookSubmenuState === "actions") {
       return (
-        <div className="absolute   flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px]  p-5 ">
+        <div className="absolute flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px] p-5">
           <button
             onClick={backToLocation}
-            className="flex items-center text-gray-400 text-sm  mb-3"
+            className="flex items-center text-gray-400 text-sm mb-3"
           >
             <ChevronLeft size={16} className="mr-1" />
             Back to location
           </button>
-          <h3 className=" text-sm font-black mb-3">{selectedLocation}:</h3>
+          <h3 className="text-sm font-black mb-3">Vancouver:</h3>
           <a
-            href={`/schedule/${selectedLocation}`}
-            className="block w-full text-center  bg-black text-white mb-2 px-14 py-4"
+            href={`/schedule`}
+            className="block w-full text-center bg-black text-white mb-2 px-14 py-4"
           >
             Book Now
           </a>
           <a
-            href={`/pricing/${selectedLocation}`}
-            className="block w-full text-center  bg-none text-black border-2 hover:bg-black hover:text-white  border-black mb-2 px-8 py-4"
+            href={`/pricing`}
+            className="block w-full text-center bg-none text-black border-2 hover:bg-black hover:text-white border-black mb-2 px-8 py-4"
           >
             Buy Now
           </a>
@@ -165,56 +113,8 @@ function Header() {
           </button>
         </div>
       );
-    } else if (bookSubmenuState === "location") {
-      return (
-        <div className="mt-4 flex flex-col items-center space-y-4">
-          <button
-            onClick={backToRegion}
-            className="flex items-center text-white text-sm font-medium hover:text-gray-300"
-          >
-            <ChevronLeft size={16} className="mr-1" />
-            Back to region
-          </button>
-          <h3 className="text-white text-sm font-medium">Choose Location</h3>
-          {["Gastown", "Kitsilano", "Lonsdale", "Main St", "Yaletown"].map(
-            (location) => (
-              <button
-                key={location}
-                onClick={() => selectLocation(location)}
-                className="text-white bg-gray-800 hover:bg-gray-700 p-2 rounded w-48 transition"
-              >
-                {location}
-              </button>
-            )
-          )}
-        </div>
-      );
-    } else if (bookSubmenuState === "actions") {
-      return (
-        <div className="mt-4 flex flex-col items-center space-y-4">
-          <button
-            onClick={backToLocation}
-            className="flex items-center text-white text-sm font-medium hover:text-gray-300"
-          >
-            <ChevronLeft size={16} className="mr-1" />
-            Back to location
-          </button>
-          <h3 className="text-white text-sm font-medium">{selectedLocation}</h3>
-          <a
-            href={`/book/${selectedRegion}/${selectedLocation}`}
-            className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded w-48 transition"
-          >
-            Book Now
-          </a>
-          <a
-            href={`/buy/${selectedRegion}/${selectedLocation}`}
-            className="text-white bg-green-600 hover:bg-green-700 p-2 rounded w-48 transition"
-          >
-            Buy Now
-          </a>
-        </div>
-      );
     }
+
     return null;
   };
 
@@ -238,15 +138,15 @@ function Header() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 py-3 h-[100px] w-screen flex justify-center items-center transition-all duration-300 ${
-        isScrolled ? "bg-black" : "bg-transparent"
+        isScrolled || isMobileMenuOpen ? "bg-black" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href={"/"}>
-            <div className="flex gap-2 items-center ">
-              <img src="/icon.png" className="h-14 md:h-18 " alt="" />
+            <div className="flex gap-2 items-center">
+              <img src="/icon.png" className="h-14 md:h-18" alt="" />
               <img src="/logo.png" className="h-14 md:h-18" alt="" />
             </div>
           </Link>
@@ -275,12 +175,7 @@ function Header() {
             >
               Why lagree?
             </a>
-            <a
-              href="/studiopolicies"
-              className="text-white hover:text-gray-300 transition"
-            >
-              Studio Policies
-            </a>
+
             <a
               href="/mobileapp"
               className="text-white hover:text-gray-300 transition"
@@ -289,11 +184,11 @@ function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Always positioned here */}
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-white focus:outline-none"
+              className="text-white focus:outline-none z-[100] relative"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -301,9 +196,9 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - separated from the button */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-20 z-50 pt-20">
+        <div className="md:hidden fixed inset-0 bg-black z-40 pt-[100px]">
           <div className="flex flex-col items-center space-y-8 p-4">
             <a
               href="/login-account"
