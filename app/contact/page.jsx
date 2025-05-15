@@ -12,7 +12,7 @@ const HomePage = () => {
         <Header />
 
         <img
-          src="/innerbanner.jpg"
+          src="/community1.jpg"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           alt=""
         />

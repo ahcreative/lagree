@@ -59,7 +59,6 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          {/* Right section - Image container */}
           <div className="w-full md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
             <Image
               src="/banner.jpg"
@@ -103,14 +102,11 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          {/* Right section - Image container */}
         </div>
       </div>
 
-      {/* Muscle fibers section */}
-      <div className="bg-white py-16 md:py-28">
+      {/* <div className="bg-white py-16 md:py-28">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-2 px-4 sm:px-6 md:px-10">
-          {/* Left section */}
           <div className="flex flex-col gap-8 md:gap-24 justify-start items-start w-full md:w-1/2">
             <div>
               <p className="text-3xl sm:text-4xl md:text-5xl text-black font-medium leading-tight">
@@ -129,7 +125,6 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Right section - Image container */}
           <div className="mt-8 md:mt-0 md:mr-10 h-fit w-full md:w-1/2 flex items-center justify-center">
             <Image
               src="/pic1.jpg"
@@ -142,11 +137,10 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Vancouver Classes Section */}
       <div className="bg-white py-16 md:py-28">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-2 px-4 sm:px-6 md:px-10">
           {/* Left section */}
-          <div className="flex flex-col gap-8 md:gap-24 justify-start items-start w-full md:w-1/2">
+      {/* <div className="flex flex-col gap-8 md:gap-24 justify-start items-start w-full md:w-1/2">
             <div className="flex flex-col gap-6 md:gap-10">
               <p className="text-3xl sm:text-4xl md:text-5xl text-black font-medium leading-tight">
                 <strong>Vancouver Classes</strong>
@@ -162,10 +156,10 @@ const HomePage = () => {
                 Book Vancouver
               </button>
             </div>
-          </div>
+          </div> */}
 
-          {/* Right section - Image container */}
-          <div className="mt-8 md:mt-0 md:mr-10 w-full md:w-1/2 flex items-center justify-center">
+      {/* Right section - Image container */}
+      {/* <div className="mt-8 md:mt-0 md:mr-10 w-full md:w-1/2 flex items-center justify-center">
             <Image
               src="/combinePhoto.jpg"
               alt="Lagree fitness"
@@ -175,21 +169,18 @@ const HomePage = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* Community Initiatives Section */}
-      <div className="bg-black text-white py-16 md:py-52 justify-center items-center h-auto md:h-screen relative overflow-hidden">
-        {/* Background Image */}
+      {/* <div className="bg-black text-white py-16 md:py-52 justify-center items-center h-auto md:h-screen relative overflow-hidden">
         <div className="absolute inset-0 w-full justify-center items-center">
           <img
-            src="/lagree-vs-pilates-video.jpg"
+            src="/community1.jpg"
             alt="Community banner"
             className="w-full h-full object-cover"
           />
-        </div>
+        </div> */}
 
-        {/* Content overlay */}
-        <div className="container relative z-10 mx-auto flex flex-col md:flex-row justify-center md:justify-end items-center md:items-end px-4 sm:px-6 md:pr-12 lg:pr-52 py-12 md:py-0">
+      {/* <div className="container relative z-10 mx-auto flex flex-col md:flex-row justify-center md:justify-end items-center md:items-end px-4 sm:px-6 md:pr-12 lg:pr-52 py-12 md:py-0">
           <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-end items-center md:items-end gap-6 md:gap-8">
             <h2 className="text-4xl sm:text-5xl md:text-6xl text-center md:text-right">
               <strong>Community Initiatives</strong>
@@ -204,7 +195,7 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div>  */}
 
       <Footer />
     </div>
