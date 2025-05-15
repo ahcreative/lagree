@@ -4,30 +4,14 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-[#F4F4F3] text-black py-8 md:py-16 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto px-4 md:px-20">
+      <div className="max-w-7xl mx-auto  md:px-20">
         {/* Main content grid - switches to column on mobile */}
         <div className="flex flex-col md:flex-row md:justify-between gap-8 md:items-start">
           {/* Newsletter Signup */}
-          <div className="space-y-4 w-full md:w-auto">
-            <div className="flex flex-col gap-2">
-              <h3 className="font-bold text-xl mb-2">STAY CONNECTED</h3>
-              <p className="font-medium text-sm mb-3 md:mb-5">
-                Community events, sales and promotions. <br />
-                Don't miss the good stuff.
-              </p>
-              <Link href={"/contact"}>
-                <div>
-                  <button className="bg-none border border-black text-black hover:bg-black hover:text-white py-3 px-28 rounded font-medium  transition-colors duration-300">
-                    SIGN UP HERE
-                  </button>
-                </div>
-              </Link>
-            </div>
-          </div>
 
           {/* Links Columns - side by side on mobile, spaced on desktop */}
           <div className="flex flex-col gap-4">
-            <div className="flex flex-row justify-between md:justify-end gap-8 md:gap-16 w-full md:w-auto">
+            <div className="flex flex-row justify-between md:justify-start gap-8 md:gap-16 w-full md:w-auto">
               {/* Links Column 1 */}
               <div className="underline">
                 <h3 className="font-bold text-base mb-2">LINKS</h3>
@@ -90,6 +74,23 @@ const Footer = () => {
                 </a>
                 .
               </p>
+            </div>
+          </div>
+
+          <div className="space-y-4 w-full md:w-auto">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-bold text-xl mb-2">STAY CONNECTED</h3>
+              <p className="font-medium text-sm mb-3 md:mb-5">
+                Community events, sales and promotions. <br />
+                Don't miss the good stuff.
+              </p>
+              <Link href={"/contact"}>
+                <div>
+                  <button className="bg-none border border-black text-black hover:bg-black hover:text-white py-3 px-28 rounded font-medium  transition-colors duration-300">
+                    SIGN UP HERE
+                  </button>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
