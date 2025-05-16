@@ -50,6 +50,45 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* YouTube Video Section */}
+      <div className="bg-white text-black py-12 md:py-20 lg:py-28">
+        <div className=" mx-auto flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10 gap-12 lg:gap-16">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center w-full">
+            <div className="flex flex-col gap-6 text-center md:text-left">
+              <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl">
+                LAGREE FAN{" "}
+                <span className="italic text-[#C8B682]">SOFIA VERGARA</span> AND
+                FOUNDER
+                <br />
+                <span className="italic text-[#C8B682]">
+                  SEBASTIEN LAGREE
+                </span>{" "}
+                CHAT
+              </h3>
+              <p className="text-sm sm:text-base md:text-lg text-gray-700">
+                Sofia Vergara has been training with MegaFormer for many years.
+                She took a moment from her busy schedule to chat with Sebastien
+                Lagree.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Video */}
+          <div className="w-full ">
+            <div className="relative overflow-hidden rounded-lg shadow-lg aspect-video">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/FFIo5v2lNGQ"
+                title="Sofia Vergara and Sebastien Lagree chat"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Results Section */}
       <div className="bg-white text-black py-12 md:py-20 lg:py-28">
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10 gap-8 md:gap-4">
@@ -111,45 +150,6 @@ const HomePage = () => {
                   challenged and preventing plateaus.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* YouTube Video Section */}
-      <div className="bg-white text-black py-12 md:py-20 lg:py-28">
-        <div className=" mx-auto flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10 gap-12 lg:gap-16">
-          {/* Left Content */}
-          <div className="flex flex-col justify-center w-full">
-            <div className="flex flex-col gap-6 text-center md:text-left">
-              <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl">
-                LAGREE FAN{" "}
-                <span className="italic text-[#C8B682]">SOFIA VERGARA</span> AND
-                FOUNDER
-                <br />
-                <span className="italic text-[#C8B682]">
-                  SEBASTIEN LAGREE
-                </span>{" "}
-                CHAT
-              </h3>
-              <p className="text-sm sm:text-base md:text-lg text-gray-700">
-                Sofia Vergara has been training with MegaFormer for many years.
-                She took a moment from her busy schedule to chat with Sebastien
-                Lagree.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Video */}
-          <div className="w-full ">
-            <div className="relative overflow-hidden rounded-lg shadow-lg aspect-video">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/FFIo5v2lNGQ"
-                title="Sofia Vergara and Sebastien Lagree chat"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
             </div>
           </div>
         </div>

@@ -319,10 +319,8 @@ const About = () => {
 
           <div className="flex flex-col gap-12 md:gap-24 justify-start items-start">
             <div className="flex flex-col text-white justify-start items-start gap-3 w-full">
-              <p className="text-lg md:text-xl">Why Lagree Elitform?</p>
-
               <p className="text-3xl md:text-5xl text-white font-medium leading-tight">
-                <strong>Invest in yourself.</strong>
+                <strong>Invest in yourself</strong>
               </p>
 
               <p className="text-base text-white md:text-lg">
@@ -382,7 +380,7 @@ const About = () => {
               {/* HTML section here */}
               <p className="text-lg md:text-xl">Our Classes</p>
               <h2 className="text-3xl md:text-5xl text-white font-medium leading-tight mb-8">
-                <strong>The Transformation Zone.</strong>
+                <strong>The Transformation Zone</strong>
               </h2>
 
               <div className="flex flex-col w-full text-white">
