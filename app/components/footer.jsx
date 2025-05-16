@@ -79,7 +79,9 @@ const Footer = () => {
 
           <div className="space-y-4 w-full md:w-auto">
             <div className="flex flex-col gap-2">
-              <h3 className="font-bold text-xl mb-2">STAY CONNECTED</h3>
+              <h3 className="font-bold uppercase text-xl mb-2">
+                Be the first to know
+              </h3>
               <p className="font-medium text-sm mb-3 md:mb-5">
                 Community events, sales and promotions. <br />
                 Don't miss the good stuff.

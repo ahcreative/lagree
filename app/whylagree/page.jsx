@@ -62,7 +62,7 @@ const About = () => {
         <Header />
       </div>
 
-      <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48 py-10 ">
+      <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48 pt-5 pb-10 ">
         <h1 className="text-3xl md:text-4xl font-bold">
           ABOUT LAGREE ELITEFORM
         </h1>
