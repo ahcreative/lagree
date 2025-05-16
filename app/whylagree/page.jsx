@@ -163,19 +163,19 @@ const About = () => {
       </div>
 
       <div className="bg-black py-16 md:py-28">
-        <div className="flex flex-col md:flex-row justify-start px-4 sm:px-6 md:px-10">
+        <div className="flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10">
           {/* Image container */}
-          <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">
+          <div className="w-full flex items-center justify-center mb-8 md:mb-0">
             <Image
-              src="/about3.png"
+              src="/whylagree.jpg"
               alt="Lagree fitness"
-              className="object-cover"
+              className=" object-cover"
               width={500}
               height={200}
             />
           </div>
 
-          <div className="flex flex-col w-full md:w-1/2 md:pl-6">
+          <div className="flex flex-col w-full ">
             <div className="flex flex-col w-full">
               {/* HTML section here */}
               <p className="text-lg md:text-xl">Our Classes</p>
