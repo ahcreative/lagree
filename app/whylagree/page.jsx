@@ -180,9 +180,7 @@ const About = () => {
               {/* HTML section here */}
               <p className="text-lg md:text-xl">Our Classes</p>
               <h2 className="text-3xl md:text-5xl text-white font-medium leading-tight mb-8">
-                <strong>
-                  Where the magic happens, with The Transformation Zone.
-                </strong>
+                <strong>The Transformation Zone.</strong>
               </h2>
 
               <div className="flex flex-col w-full">
