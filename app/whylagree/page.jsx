@@ -377,31 +377,31 @@ const About = () => {
             />
           </div>
 
-          <div className="flex flex-col w-full ">
-            <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full text-white ">
+            <div className="flex flex-col w-full text-white">
               {/* HTML section here */}
               <p className="text-lg md:text-xl">Our Classes</p>
               <h2 className="text-3xl md:text-5xl text-white font-medium leading-tight mb-8">
                 <strong>The Transformation Zone.</strong>
               </h2>
 
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full text-white">
                 {/* Megaformer class */}
-                <div className="w-full">
+                <div className="w-full text-white">
                   <div className="border-t border-white"></div>
                   <div
-                    className="flex items-center cursor-pointer py-2"
+                    className="flex items-center text-white cursor-pointer py-2"
                     onClick={() => toggleClass("megaformer")}
                   >
                     <motion.div
                       initial={false}
                       animate={{ rotate: openClass === "megaformer" ? 45 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
+                      className="text-2xl font-bold text-white"
                     >
                       {openClass === "megaformer" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">
+                    <h4 className="ml-4 text-white text-xl font-bold">
                       Full body Mega Former
                     </h4>
                   </div>
@@ -414,10 +414,10 @@ const About = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
+                        className="overflow-hidden text-white"
                       >
-                        <div className="pt-4 pb-2">
-                          <p className="mb-2 text-base md:text-lg">
+                        <div className="pt-4 pb-2 text-white">
+                          <p className="mb-2 text-white text-base md:text-lg">
                             This full-body workout on the Megaformer is designed
                             to build strength, enhance flexibility, and boost
                             endurance. With only 15 people per class, you’ll get
@@ -427,7 +427,7 @@ const About = () => {
                             Modifications are always available—so come as you
                             are, and leave stronger.
                           </p>
-                          <p className="text-base md:text-lg font-bold">
+                          <p className="text-base text-white md:text-lg font-bold">
                             45 minutes. All levels.
                           </p>
                         </div>
@@ -437,21 +437,23 @@ const About = () => {
                 </div>
 
                 {/* Mega Classic class */}
-                <div className="w-full">
+                <div className="w-full text-white">
                   <div className="border-t border-white"></div>
                   <div
-                    className="flex items-center cursor-pointer py-2"
+                    className="flex text-white items-center cursor-pointer py-2"
                     onClick={() => toggleClass("megaClassic")}
                   >
                     <motion.div
                       initial={false}
                       animate={{ rotate: openClass === "megaClassic" ? 45 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
+                      className="text-2xl text-white font-bold"
                     >
                       {openClass === "megaClassic" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Mega Essential</h4>
+                    <h4 className="ml-4 text-white text-xl font-bold">
+                      Mega Essential
+                    </h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -462,10 +464,10 @@ const About = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
+                        className="overflow-hidden text-white"
                       >
-                        <div className="pt-4 pb-2">
-                          <p className="mb-2 text-base md:text-lg">
+                        <div className="pt-4 text-white pb-2">
+                          <p className="mb-2 text-white text-base md:text-lg">
                             Enjoy all our signature moves with a gentler touch,
                             performed at the front of the Megaformer where the
                             spring tension provides extra support. Perfect for
@@ -474,7 +476,7 @@ const About = () => {
                             with simplicity. Modifications make it accessible
                             for all fitness levels..
                           </p>
-                          <p className="text-base md:text-lg font-bold">
+                          <p className="text-base text-white md:text-lg font-bold">
                             45 minutes. All levels.
                           </p>
                         </div>
@@ -487,7 +489,7 @@ const About = () => {
                 <div className="w-full">
                   <div className="border-t border-white"></div>
                   <div
-                    className="flex items-center cursor-pointer py-2"
+                    className="flex text-white items-center cursor-pointer py-2"
                     onClick={() => toggleClass("megaAdvanced")}
                   >
                     <motion.div
@@ -496,11 +498,13 @@ const About = () => {
                         rotate: openClass === "megaAdvanced" ? 45 : 0,
                       }}
                       transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
+                      className="text-2xl text-white font-bold"
                     >
                       {openClass === "megaAdvanced" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Mega Strong</h4>
+                    <h4 className="ml-4 text-white text-xl font-bold">
+                      Mega Strong
+                    </h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -511,10 +515,10 @@ const About = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
+                        className="overflow-hidden text-white"
                       >
-                        <div className="pt-4 pb-2">
-                          <p className="mb-2 text-base md:text-lg">
+                        <div className="pt-4 pb-2 text-white">
+                          <p className="mb-2 text-white text-base md:text-lg">
                             Get ready to push limits. This 45-minute challenge
                             is packed with slower, longer moves, heavier
                             springs, and bold variations that hit differently—in
@@ -523,7 +527,7 @@ const About = () => {
                             little uncomfortable. No requirements—just show up,
                             dig deep, and let your strength surprise you.
                           </p>
-                          <p className="text-base md:text-lg font-bold">
+                          <p className="text-base text-white md:text-lg font-bold">
                             45 minutes. All levels (if you know, you know).
                           </p>
                         </div>
@@ -533,7 +537,7 @@ const About = () => {
                 </div>
 
                 {/* Mega Mama class */}
-                <div className="w-full">
+                <div className="w-full text-white">
                   <div className="border-t border-white"></div>
                   <div
                     className="flex items-center cursor-pointer py-2"
@@ -543,11 +547,13 @@ const About = () => {
                       initial={false}
                       animate={{ rotate: openClass === "megaMama" ? 45 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
+                      className="text-2xl text-white font-bold"
                     >
                       {openClass === "megaMama" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Upper Body & Abs</h4>
+                    <h4 className="ml-4 text-white text-xl font-bold">
+                      Upper Body & Abs
+                    </h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -560,7 +566,7 @@ const About = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-4 pb-2">
+                        <div className="pt-4 text-white pb-2">
                           <p className="mb-2 text-base md:text-lg">
                             No legs, no problem. This 45-minute burner is all
                             about arms, shoulders, and core. Expect deep,
@@ -569,7 +575,7 @@ const About = () => {
                             sculpting, it's spicy—and it's for anyone ready to
                             feel the heat.
                           </p>
-                          <p className="text-base md:text-lg font-bold">
+                          <p className="text-base text-white md:text-lg font-bold">
                             45 minutes. All levels.
                           </p>
                         </div>
@@ -582,18 +588,20 @@ const About = () => {
                 <div className="w-full">
                   <div className="border-t border-white"></div>
                   <div
-                    className="flex items-center cursor-pointer py-2"
+                    className="flex items-center text-white cursor-pointer py-2"
                     onClick={() => toggleClass("armsAbs")}
                   >
                     <motion.div
                       initial={false}
                       animate={{ rotate: openClass === "armsAbs" ? 45 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
+                      className="text-2xl text-white font-bold"
                     >
                       {openClass === "armsAbs" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Ass + Abs</h4>
+                    <h4 className="ml-4 text-white text-xl font-bold">
+                      Ass + Abs
+                    </h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -607,7 +615,7 @@ const About = () => {
                         className="overflow-hidden"
                       >
                         <div className="pt-4 pb-2">
-                          <p className="mb-2 text-base md:text-lg">
+                          <p className="mb-2 text-white text-base md:text-lg">
                             Power through 45 minutes of targeted glute and core
                             work designed to tone, lift, and define. This class
                             challenges your lower body with dynamic moves that
@@ -615,7 +623,7 @@ const About = () => {
                             levels—come ready to feel the burn and crush your
                             goals.
                           </p>
-                          <p className="text-base md:text-lg font-bold">
+                          <p className="text-base text-white md:text-lg font-bold">
                             45 minutes. Prerequisite: 10+ Classes.
                           </p>
                         </div>

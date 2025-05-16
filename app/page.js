@@ -60,8 +60,7 @@ const HomePage = () => {
               </h1>
               <p className="text-sm sm:text-base md:text-lg max-w-full md:pl-0 lg:pl-20">
                 Our full-body, low-impact workout delivers the results
-                you&apos;re <br className="hidden lg:block" />
-                after—safely and effectively.
+                you&apos;re after—safely and effectively.
               </p>
             </div>
           </div>
