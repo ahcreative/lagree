@@ -58,29 +58,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="relative h-screen flex flex-col justify-center items-center w-full overflow-hidden">
+      <div className="relative h-[95px] flex flex-col justify-center items-center w-full overflow-hidden">
         <Header />
-
-        <img
-          src="/megapro.jpg"
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          alt=""
-        />
-        {/* Content Section */}
-        <div className="relative z-20 h-full flex justify-center items-center">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12">
-            <div className="">
-              <h1
-                className={`text-3xl md:text-5xl lg:text-7xl text-white font-semibold mb-6`}
-              >
-                About Us
-              </h1>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48 py-10 md:py-20">
+      <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48 py-10 ">
         <h1 className="text-3xl md:text-4xl font-bold">
           ABOUT LAGREE ELITEFORM
         </h1>
@@ -121,9 +103,9 @@ const About = () => {
       </div>
 
       <div className="bg-black py-16 md:py-28">
-        <div className="container flex flex-col md:flex-row items-center md:items-start justify-start gap-10 md:gap-20 px-4 sm:px-6 md:px-10">
+        <div className="container flex flex-col md:flex-row items-center justify-center md:items-start gap-10 md:gap-20 px-4 sm:px-6 md:px-10">
           {/* Right section - Image container */}
-          <div className="w-full md:w-1/2 flex items-center md:items-start justify-center">
+          <div className="w-full md:w-1/2 flex items-center justify-center">
             <Image
               src="/about1.jpg"
               alt="Lagree fitness"
@@ -198,7 +180,9 @@ const About = () => {
               {/* HTML section here */}
               <p className="text-lg md:text-xl">Our Classes</p>
               <h2 className="text-3xl md:text-5xl text-white font-medium leading-tight mb-8">
-                <strong>Where the magic happens.</strong>
+                <strong>
+                  Where the magic happens, with The Transformation Zone.
+                </strong>
               </h2>
 
               <div className="flex flex-col w-full">
@@ -217,7 +201,9 @@ const About = () => {
                     >
                       {openClass === "megaformer" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Megaformer</h4>
+                    <h4 className="ml-4 text-xl font-bold">
+                      Full body Mega Former
+                    </h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -232,18 +218,17 @@ const About = () => {
                       >
                         <div className="pt-4 pb-2">
                           <p className="mb-2 text-base md:text-lg">
-                            Our signature class. This full body workout on the
-                            Megaformer is designed to{" "}
-                            <br className="hidden md:block" /> improve your
-                            strength, flexibility and endurance. With a maximum
-                            of 20 people per <br className="hidden md:block" />{" "}
-                            class, expect lots of attention. Whether beginner,
-                            intermediate or advanced,{" "}
-                            <br className="hidden md:block" /> modifications
-                            make this class suitable for all levels.
+                            This full-body workout on the Megaformer is designed
+                            to build strength, enhance flexibility, and boost
+                            endurance. With only 15 people per class, you’ll get
+                            the attention you deserve and the burn you came for.
+                            Expect dynamic moves, deep muscle engagement, and
+                            the kind of sweat that feels oh-so-satisfying.
+                            Modifications are always available—so come as you
+                            are, and leave stronger.
                           </p>
                           <p className="text-base md:text-lg font-bold">
-                            40 minutes. All levels.
+                            45 minutes. All levels.
                           </p>
                         </div>
                       </motion.div>
@@ -266,7 +251,7 @@ const About = () => {
                     >
                       {openClass === "megaClassic" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Mega Classic</h4>
+                    <h4 className="ml-4 text-xl font-bold">Mega Essential</h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -281,18 +266,16 @@ const About = () => {
                       >
                         <div className="pt-4 pb-2">
                           <p className="mb-2 text-base md:text-lg">
-                            All our classic moves, taught at the front of the
-                            Mega where the spring tension adds{" "}
-                            <br className="hidden md:block" /> extra support. If
-                            you find yourself modifying exercises at the back of
-                            the machine <br className="hidden md:block" />
-                            but know you have an extra gear, this class is for
-                            you. Also a great option for new{" "}
-                            <br className="hidden md:block" /> clients, pre/post
-                            natal or guests that find substance in simplicity.
+                            Enjoy all our signature moves with a gentler touch,
+                            performed at the front of the Megaformer where the
+                            spring tension provides extra support. Perfect for
+                            beginners, pre/post-natal clients, or anyone looking
+                            for a solid, low-impact workout that builds strength
+                            with simplicity. Modifications make it accessible
+                            for all fitness levels..
                           </p>
                           <p className="text-base md:text-lg font-bold">
-                            40 minutes. All levels.
+                            45 minutes. All levels.
                           </p>
                         </div>
                       </motion.div>
@@ -317,7 +300,7 @@ const About = () => {
                     >
                       {openClass === "megaAdvanced" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Mega Advanced</h4>
+                    <h4 className="ml-4 text-xl font-bold">Mega Strong</h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -332,21 +315,16 @@ const About = () => {
                       >
                         <div className="pt-4 pb-2">
                           <p className="mb-2 text-base md:text-lg">
-                            Longer moves, heavier spring loads and mind-altering
-                            variations geared to take it{" "}
-                            <br className="hidden md:block" /> to the next
-                            level, Mega Advance is for guests who have completed
-                            25+ classes in <br className="hidden md:block" />
-                            the last 6 months and are looking for a greater
-                            challenge. If you find yourselves{" "}
-                            <br className="hidden md:block" /> ahead of the pack
-                            during transitions, always take challenge options
-                            when given and <br className="hidden md:block" />
-                            crave new variations of exercises that keep you
-                            guessing, this class is for you.
+                            Get ready to push limits. This 45-minute challenge
+                            is packed with slower, longer moves, heavier
+                            springs, and bold variations that hit differently—in
+                            the best way. Designed for those who love a sweaty
+                            grind, thrive on intensity, and don’t mind getting a
+                            little uncomfortable. No requirements—just show up,
+                            dig deep, and let your strength surprise you.
                           </p>
                           <p className="text-base md:text-lg font-bold">
-                            50 minutes. Prerequisite: 25+ Classes
+                            45 minutes. All levels (if you know, you know).
                           </p>
                         </div>
                       </motion.div>
@@ -369,7 +347,7 @@ const About = () => {
                     >
                       {openClass === "megaMama" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Mega Mama</h4>
+                    <h4 className="ml-4 text-xl font-bold">Upper Body & Abs</h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -384,18 +362,12 @@ const About = () => {
                       >
                         <div className="pt-4 pb-2">
                           <p className="mb-2 text-base md:text-lg">
-                            Strengthen your connection to your pelvic floor and
-                            develop deep core activation{" "}
-                            <br className="hidden md:block" /> through breath.
-                            Specifically designed for those wanting to educate
-                            themselves <br className="hidden md:block" /> with
-                            how to move their body safely for preconception and
-                            during prenatal and{" "}
-                            <br className="hidden md:block" /> postnatal
-                            fitness. Expect lots of hands on adjustments and
-                            modifications to meet{" "}
-                            <br className="hidden md:block" /> your individual
-                            and personal needs.
+                            No legs, no problem. This 45-minute burner is all
+                            about arms, shoulders, and core. Expect deep,
+                            controlled movements that fire up your upper body
+                            and leave your abs talking. It's strength, it's
+                            sculpting, it's spicy—and it's for anyone ready to
+                            feel the heat.
                           </p>
                           <p className="text-base md:text-lg font-bold">
                             45 minutes. All levels.
@@ -421,7 +393,7 @@ const About = () => {
                     >
                       {openClass === "armsAbs" ? "−" : "+"}
                     </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Arms + Abs</h4>
+                    <h4 className="ml-4 text-xl font-bold">Ass + Abs</h4>
                   </div>
                   <div className="border-b border-white"></div>
 
@@ -436,111 +408,15 @@ const About = () => {
                       >
                         <div className="pt-4 pb-2">
                           <p className="mb-2 text-base md:text-lg">
-                            40 Minutes of just Arms & Core work to make you
-                            long, lean and defined - no legs{" "}
-                            <br className="hidden md:block" /> required! This
-                            class is recommended for guests who've completed 10
-                            or more <br className="hidden md:block" />
-                            Lagree classes and are looking for a more targeted
-                            challenge.
+                            Power through 45 minutes of targeted glute and core
+                            work designed to tone, lift, and define. This class
+                            challenges your lower body with dynamic moves that
+                            build strength and sculpt muscle. Open to all
+                            levels—come ready to feel the burn and crush your
+                            goals.
                           </p>
                           <p className="text-base md:text-lg font-bold">
-                            40 minutes. Prerequisite: 10+ Classes.
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Ass + Abs class */}
-                <div className="w-full">
-                  <div className="border-t border-white"></div>
-                  <div
-                    className="flex items-center cursor-pointer py-2"
-                    onClick={() => toggleClass("assAbs")}
-                  >
-                    <motion.div
-                      initial={false}
-                      animate={{ rotate: openClass === "assAbs" ? 45 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
-                    >
-                      {openClass === "assAbs" ? "−" : "+"}
-                    </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">Ass + Abs</h4>
-                  </div>
-                  <div className="border-b border-white"></div>
-
-                  <AnimatePresence>
-                    {openClass === "assAbs" && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pt-4 pb-2">
-                          <p className="mb-2 text-base md:text-lg">
-                            New Abs, who dis? 40 Minutes of just Ass + Ab work
-                            to make you long, lean and{" "}
-                            <br className="hidden md:block" /> defined - lots of
-                            lower body required! This class is recommended for
-                            all levels.
-                          </p>
-                          <p className="text-base md:text-lg font-bold">
-                            40 minutes. All levels.
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Strength + Stretch class */}
-                <div className="w-full">
-                  <div className="border-t border-white"></div>
-                  <div
-                    className="flex items-center cursor-pointer py-2"
-                    onClick={() => toggleClass("strengthStretch")}
-                  >
-                    <motion.div
-                      initial={false}
-                      animate={{
-                        rotate: openClass === "strengthStretch" ? 45 : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className="text-2xl font-bold"
-                    >
-                      {openClass === "strengthStretch" ? "−" : "+"}
-                    </motion.div>
-                    <h4 className="ml-4 text-xl font-bold">
-                      Strength + Stretch
-                    </h4>
-                  </div>
-
-                  <AnimatePresence>
-                    {openClass === "strengthStretch" && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pt-4 pb-2">
-                          <p className="mb-2 text-base md:text-lg">
-                            30 minutes of intense Lagree, 15 minutes of a
-                            sweeeeet stretch done on the{" "}
-                            <br className="hidden md:block" /> Megaformer. We
-                            educate first-timers about this class type as it is
-                            not a regular <br className="hidden md:block" />{" "}
-                            Lagree experience and the 30 minutes can be pretty
-                            intense.
-                          </p>
-                          <p className="text-base md:text-lg font-bold">
-                            45 minutes. Low Impact. All levels.
+                            45 minutes. Prerequisite: 10+ Classes.
                           </p>
                         </div>
                       </motion.div>

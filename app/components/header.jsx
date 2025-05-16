@@ -102,15 +102,40 @@ function Header() {
     if (bookSubmenuState === "region") {
       return (
         <div className="mt-4 flex flex-col items-center space-y-4">
-          <h3 className="text-black bg-white px-6 text-sm font-medium">
+          <h3 className="text-black bg-white px-14 py-4  font-medium">
             Choose Region
           </h3>
           <button
             onClick={() => selectRegion("Vancouver")}
-            className="text-white bg-gray-800 hover:bg-gray-700 p-2 rounded w-48 transition"
+            className="text-white border border-white px-14 py-4  rounded w-48 transition"
           >
             Vancouver
           </button>
+        </div>
+      );
+    } else if (bookSubmenuState === "actions") {
+      return (
+        <div className="mt-4 flex flex-col items-center space-y-4">
+          <button
+            onClick={backToLocation}
+            className="flex items-center text-gray-400 text-sm mb-3"
+          >
+            <ChevronLeft size={16} className="mr-1" />
+            Back to location
+          </button>
+          <h3 className="text-sm font-black mb-3">Vancouver:</h3>
+          <a
+            href={`/schedule`}
+            className="block w-full text-center bg-white text-black mb-2 px-14 py-4"
+          >
+            Book Now
+          </a>
+          <a
+            href={`/pricing`}
+            className="block w-full text-center bg-none text-white border-2  border-white mb-2 px-8 py-4"
+          >
+            Buy Now
+          </a>
         </div>
       );
     }
@@ -198,11 +223,11 @@ function Header() {
 
       {/* Mobile Menu - separated from the button */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black z-40 pt-[100px]">
-          <div className="flex flex-col items-center space-y-8 p-4">
+        <div className="md:hidden fixed justify-center items-center inset-0 bg-black z-40 pt-[100px]">
+          <div className="flex flex-col justify-center items-center space-y-8 p-4">
             <a
               href="/login-account"
-              className="text-white hover:text-gray-300 transition"
+              className="text-white text-2xl hover:text-gray-300 transition"
             >
               My Account
             </a>
@@ -211,7 +236,7 @@ function Header() {
                 <a
                   href="#"
                   onClick={handleBookClick}
-                  className="text-white hover:text-gray-300 transition"
+                  className="text-white text-2xl hover:text-gray-300 transition"
                 >
                   Book/Buy
                 </a>
@@ -221,19 +246,14 @@ function Header() {
             </div>
             <a
               href="/whylagree"
-              className="text-white hover:text-gray-300 transition"
+              className="text-white text-2xl hover:text-gray-300 transition"
             >
               Why lagree?
             </a>
-            <a
-              href="/studiopolicies"
-              className="text-white hover:text-gray-300 transition"
-            >
-              Studio Policies
-            </a>
+
             <a
               href="/mobileapp"
-              className="text-white hover:text-gray-300 transition"
+              className="text-white text-2xl hover:text-gray-300 transition"
             >
               Mobile App
             </a>
