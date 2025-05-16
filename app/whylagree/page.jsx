@@ -1,14 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const About = () => {
   const [openClass, setOpenClass] = useState(null);
   const [activeSection, setActiveSection] = useState(1);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [bookSubmenuState, setBookSubmenuState] = useState("none"); // none, region, location, actions
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
 
   const toggleSection = (sectionId) => {
     setActiveSection(sectionId);
@@ -22,47 +27,244 @@ const About = () => {
     }
   };
 
-  // Define content for each toggle section
-  const toggleSectionContent = {
-    1: {
-      title: "Springs",
-      description:
-        "The Megaformer uses springs for resistance. Spring tension allows a greater number of muscle fibres to be used throughout the range of motion and makes it difficult to plateau.",
-      image: "/springs.jpg",
-    },
-    2: {
-      title: "Carriage",
-      description:
-        "The Megaformer carriage is designed to move smoothly between exercises, providing stability while allowing dynamic movement patterns that engage your core throughout the workout.",
-      image: "/meet-the-mega.jpg",
-    },
-    3: {
-      title: "Handlebars",
-      description:
-        "Multiple handlebars positioned throughout the machine provide stability and leverage points, allowing for various grips and positions to target different muscle groups.",
-      image: "/handlebars.jpg",
-    },
-    4: {
-      title: "Cables",
-      description:
-        "The cable system allows for resistance training through multiple planes of motion, creating balanced strength and targeting muscles from different angles.",
-      image: "/cables.jpg",
-    },
-    5: {
-      title: "Platform",
-      description:
-        "The non-slip platform provides secure footing during exercises, with multiple hand and foot positions marked for proper form and alignment.",
-      image: "/platform.jpg",
-    },
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const handleBookClick = (e) => {
+    e.preventDefault();
+    setBookSubmenuState("region");
+  };
+
+  const selectRegion = (region) => {
+    setSelectedRegion(region);
+    setBookSubmenuState("actions");
+  };
+
+  const backToLocation = () => {
+    setBookSubmenuState("region");
+  };
+
+  const renderSubmenu = () => {
+    if (bookSubmenuState === "region") {
+      return (
+        <div className="absolute flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px] p-5">
+          <h3 className="text-lg font-bold mb-3">Choose Region:</h3>
+          <button
+            onClick={() => selectRegion("Vancouver")}
+            className="w-full text-center bg-black text-white px-8 py-4"
+          >
+            Vancouver
+          </button>
+        </div>
+      );
+    } else if (bookSubmenuState === "actions") {
+      return (
+        <div className="absolute flex flex-col top-full -left-16 justify-start items-start mt-2 bg-white text-black w-[300px] p-5">
+          <button
+            onClick={backToLocation}
+            className="flex items-center text-gray-400 text-sm mb-3"
+          >
+            <ChevronLeft size={16} className="mr-1" />
+            Back to location
+          </button>
+          <h3 className="text-sm font-black mb-3">Vancouver:</h3>
+          <a
+            href={`/schedule`}
+            className="block w-full text-center bg-black text-white mb-2 px-14 py-4"
+          >
+            Book Now
+          </a>
+          <a
+            href={`/pricing`}
+            className="block w-full text-center bg-none text-black border-2 hover:bg-black hover:text-white border-black mb-2 px-8 py-4"
+          >
+            Buy Now
+          </a>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  const renderMobileSubmenu = () => {
+    if (bookSubmenuState === "region") {
+      return (
+        <div className="mt-4 flex flex-col items-center space-y-4">
+          <h3 className="text-black bg-white px-14 py-4  font-medium">
+            Choose Region
+          </h3>
+          <button
+            onClick={() => selectRegion("Vancouver")}
+            className="text-white border border-white px-14 py-4  rounded w-48 transition"
+          >
+            Vancouver
+          </button>
+        </div>
+      );
+    } else if (bookSubmenuState === "actions") {
+      return (
+        <div className="mt-4 flex flex-col items-center space-y-4">
+          <button
+            onClick={backToLocation}
+            className="flex items-center text-gray-400 text-sm mb-3"
+          >
+            <ChevronLeft size={16} className="mr-1" />
+            Back to location
+          </button>
+          <h3 className="text-sm font-black mb-3">Vancouver:</h3>
+          <a
+            href={`/schedule`}
+            className="block w-full text-center bg-white text-black mb-2 px-14 py-4"
+          >
+            Book Now
+          </a>
+          <a
+            href={`/pricing`}
+            className="block w-full text-center bg-none text-white border-2  border-white mb-2 px-8 py-4"
+          >
+            Buy Now
+          </a>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
+  // Close submenu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        bookSubmenuState !== "none" &&
+        !event.target.closest(".book-menu-container")
+      ) {
+        setBookSubmenuState("none");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [bookSubmenuState]);
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="relative h-[95px] flex flex-col justify-center items-center w-full overflow-hidden">
-        <Header />
+      <div className="  w-full overflow-hidden">
+        <nav
+          className={`fixed top-0 left-0 right-0 z-50 py-3 h-[100px] flex justify-center items-center transition-all duration-300 bg-black`}
+        >
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <Link href={"/"}>
+                <div className="flex gap-2 items-center">
+                  <img src="/icon.png" className="h-14 md:h-18" alt="" />
+                  <img src="/logo.png" className="h-14 md:h-18" alt="" />
+                </div>
+              </Link>
+
+              {/* Desktop Menu */}
+              <div className="hidden md:flex items-center font-medium pr-10 uppercase space-x-8">
+                <a
+                  href="/login-account"
+                  className="text-white hover:text-gray-300 transition"
+                >
+                  My Account
+                </a>
+                <div className="relative book-menu-container">
+                  <a
+                    href="#"
+                    onClick={handleBookClick}
+                    className="text-white hover:text-gray-300 transition"
+                  >
+                    Book/Buy
+                  </a>
+                  {renderSubmenu()}
+                </div>
+                <a
+                  href="/whylagree"
+                  className="text-white hover:text-gray-300 transition"
+                >
+                  Why lagree?
+                </a>
+
+                <a
+                  href="/mobileapp"
+                  className="text-white hover:text-gray-300 transition"
+                >
+                  Mobile App
+                </a>
+              </div>
+
+              {/* Mobile Menu Button - Always positioned here */}
+              <div className="md:hidden">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="text-white focus:outline-none z-[100] relative"
+                >
+                  {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Menu - separated from the button */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden fixed justify-center items-center inset-0 bg-black z-40 pt-[100px]">
+              <div className="flex flex-col justify-center items-center space-y-8 p-4">
+                <a
+                  href="/login-account"
+                  className="text-white text-2xl hover:text-gray-300 transition"
+                >
+                  My Account
+                </a>
+                <div className="book-menu-container">
+                  {bookSubmenuState === "none" ? (
+                    <a
+                      href="#"
+                      onClick={handleBookClick}
+                      className="text-white text-2xl hover:text-gray-300 transition"
+                    >
+                      Book/Buy
+                    </a>
+                  ) : (
+                    renderMobileSubmenu()
+                  )}
+                </div>
+                <a
+                  href="/whylagree"
+                  className="text-white text-2xl hover:text-gray-300 transition"
+                >
+                  Why lagree?
+                </a>
+
+                <a
+                  href="/mobileapp"
+                  className="text-white text-2xl hover:text-gray-300 transition"
+                >
+                  Mobile App
+                </a>
+              </div>
+            </div>
+          )}
+        </nav>
       </div>
 
-      <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48 pt-5 pb-10 ">
+      <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48  pt-34 pb-10 ">
         <h1 className="text-3xl md:text-4xl font-bold">
           ABOUT LAGREE ELITEFORM
         </h1>
