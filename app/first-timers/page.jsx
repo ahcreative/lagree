@@ -12,7 +12,7 @@ const FirstTimers = () => {
         <Header />
 
         <img
-          src="/cover2.jpg"
+          src="/fitness.jpg"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           alt=""
         />
@@ -132,19 +132,19 @@ const FirstTimers = () => {
       </div>
       <div className="bg-black py-16 md:py-28">
         <div className="container mx-auto px-4 sm:px-10">
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-28">
             {/* Image container */}
-            <div className="w-full md:w-1/2 flex items-center justify-center">
+            <div className="w-full flex items-center justify-center">
               <Image
                 src="/about3.jpg"
                 alt="Lagree fitness"
-                className="object-cover w-full"
+                className="object-cover"
                 width={500}
                 height={200}
               />
             </div>
 
-            <div className="w-full md:w-1/2 flex flex-col gap-12 md:gap-24">
+            <div className="w-full flex flex-col gap-12 md:gap-24">
               <div className="flex flex-col">
                 <p className="text-lg sm:text-xl">Take The First Step</p>
 
