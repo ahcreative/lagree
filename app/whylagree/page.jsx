@@ -318,7 +318,7 @@ const About = () => {
           </div>
 
           <div className="flex flex-col gap-12 md:gap-24 justify-start items-start">
-            <div className="flex flex-col justify-start items-start gap-3 w-full">
+            <div className="flex flex-col text-white justify-start items-start gap-3 w-full">
               <p className="text-lg md:text-xl">Why Lagree Elitform?</p>
 
               <p className="text-3xl md:text-5xl text-white font-medium leading-tight">
