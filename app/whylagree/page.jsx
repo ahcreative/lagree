@@ -325,36 +325,36 @@ const About = () => {
                 <strong>Invest in yourself.</strong>
               </p>
 
-              <p className="text-base md:text-lg">
+              <p className="text-base text-white md:text-lg">
                 This method delivers. Sculpt long, lean muscle and transform
                 your body with precision and purpose.
               </p>
 
               <p>
-                <span className="text-lg md:text-xl font-bold">
+                <span className="text-lg text-white md:text-xl font-bold">
                   Tailored attention.
                 </span>
-                <p className="text-base md:text-lg">
+                <p className="text-base text-white md:text-lg">
                   With small class sizes, you'll receive personalized guidance
                   to maximize every movement.
                 </p>
               </p>
 
               <p>
-                <span className="text-lg md:text-xl font-bold">
+                <span className="text-lg text-white md:text-xl font-bold">
                   Empowerment over ego.
                 </span>
-                <p className="text-base md:text-lg">
+                <p className="text-base text-white md:text-lg">
                   Our expert instructors motivate with compassion—challenging
                   you while meeting you where you are.
                 </p>
               </p>
 
               <p>
-                <span className="text-lg md:text-xl font-bold">
+                <span className="text-lg text-white md:text-xl font-bold">
                   Inclusive by design.
                 </span>
-                <p className="text-base md:text-lg">
+                <p className="text-base text-white md:text-lg">
                   Everybody is welcome. No matter your level, you belong
                   here—and you can sweat with us.
                 </p>
