@@ -304,7 +304,7 @@ const About = () => {
         <img src="/megapro.jpg" className="w-full h-full object-cover" alt="" />
       </div>
 
-      <div className="bg-black py-16 md:py-28">
+      <div className="bg-white py-16 md:py-28">
         <div className="container flex flex-col md:flex-row items-center justify-center md:items-start gap-10 md:gap-20 px-4 sm:px-6 md:px-10">
           {/* Right section - Image container */}
           <div className="w-full md:w-1/2 flex items-center justify-center">
@@ -318,41 +318,41 @@ const About = () => {
           </div>
 
           <div className="flex flex-col gap-12 md:gap-24 justify-start items-start">
-            <div className="flex flex-col text-white justify-start items-start gap-3 w-full">
-              <p className="text-3xl md:text-5xl text-white font-medium leading-tight">
+            <div className="flex flex-col text-black justify-start items-start gap-3 w-full">
+              <p className="text-3xl md:text-5xl text-black font-medium leading-tight">
                 <strong>Invest in yourself</strong>
               </p>
 
-              <p className="text-base text-white md:text-lg">
+              <p className="text-base text-black md:text-lg">
                 This method delivers. Sculpt long, lean muscle and transform
                 your body with precision and purpose.
               </p>
 
               <p>
-                <span className="text-lg text-white md:text-xl font-bold">
+                <span className="text-lg text-black md:text-xl font-bold">
                   Tailored attention.
                 </span>
-                <p className="text-base text-white md:text-lg">
+                <p className="text-base text-black md:text-lg">
                   With small class sizes, you'll receive personalized guidance
                   to maximize every movement.
                 </p>
               </p>
 
               <p>
-                <span className="text-lg text-white md:text-xl font-bold">
+                <span className="text-lg text-black md:text-xl font-bold">
                   Empowerment over ego.
                 </span>
-                <p className="text-base text-white md:text-lg">
+                <p className="text-base text-black md:text-lg">
                   Our expert instructors motivate with compassion—challenging
                   you while meeting you where you are.
                 </p>
               </p>
 
               <p>
-                <span className="text-lg text-white md:text-xl font-bold">
+                <span className="text-lg text-black md:text-xl font-bold">
                   Inclusive by design.
                 </span>
-                <p className="text-base text-white md:text-lg">
+                <p className="text-base text-black md:text-lg">
                   Everybody is welcome. No matter your level, you belong
                   here—and you can sweat with us.
                 </p>
@@ -598,7 +598,7 @@ const About = () => {
                       {openClass === "armsAbs" ? "−" : "+"}
                     </motion.div>
                     <h4 className="ml-4 text-white text-xl font-bold">
-                      Ass + Abs
+                      Ass & Abs
                     </h4>
                   </div>
                   <div className="border-b border-white"></div>

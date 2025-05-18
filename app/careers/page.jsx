@@ -56,35 +56,35 @@ const Community = () => {
               view available job postings.{" "}
             </p>
           </div>
-          <div className="flex flex-col md:flex-row  gap-10">
-            <Link href={"/careers/trainer-cq"}>
+          <div className="flex flex-col   gap-10">
+            <Link href={"/careers/studio-manager"}>
               <div className="flex flex-col justify-center items-center gap-2">
                 <img
-                  src="/trainer.jpg"
-                  className="h-[200px] object-cover hover:opacity-70 transition duration-300"
+                  src="/trainer.jpeg"
+                  className="h-[200px] w-[200px] object-cover hover:opacity-70 transition duration-300"
                   alt=""
                 />
-                <h1 className="font-bold">Trainer---Coquitlam</h1>
+                <h1 className="font-bold">Studio Manager</h1>
+              </div>
+            </Link>
+            <Link href={"/careers/instructor"}>
+              <div className="flex flex-col  justify-center items-center gap-2">
+                <img
+                  src="/front.jpeg"
+                  className="h-[200px] w-[200px] object-cover hover:opacity-70 transition duration-300"
+                  alt=""
+                />
+                <h1 className="font-bold">Instructor</h1>
               </div>
             </Link>
             <Link href={"/careers/front-of-house"}>
-              <div className="flex flex-col  justify-center items-center gap-2">
-                <img
-                  src="/front.jpg"
-                  className="h-[200px] object-cover hover:opacity-70 transition duration-300"
-                  alt=""
-                />
-                <h1 className="font-bold">Front of House</h1>
-              </div>
-            </Link>
-            <Link href={"/careers/trainer"}>
               <div className="flex flex-col justify-center items-center gap-2">
                 <img
                   src="/trainer2.jpeg"
-                  className="h-[200px] object-cover hover:opacity-70 transition duration-300"
+                  className="h-[200px] w-[200px]  hover:opacity-70 transition duration-300"
                   alt=""
                 />
-                <h1 className="font-bold">Trainer</h1>
+                <h1 className="font-bold">Front House</h1>
               </div>
             </Link>
           </div>

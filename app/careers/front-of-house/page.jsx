@@ -22,115 +22,141 @@ const Community = () => {
                   <strong>Guest Experience Member</strong>
                 </p>
 
-                <p className="font-light text-sm sm:text-base">
-                  <span className="font-bold">Reports To:</span> Studio Manager
+                <p className="">
+                  <span className="font-black">Reports To:</span> Studio Manager
                 </p>
-                <p className="font-light text-sm sm:text-base">
-                  <span className="font-bold">Employment Status: </span>
-                  Part-Time, 12+ hours per week
+                <p className="">
+                  <span className="font-black">Employment Type:</span> Part-Time
+                  (Minimum 12 hours per week)
                 </p>
+
+                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
+                  <strong>Qualifications</strong>
+                </p>
+
+                <ul className="list-disc pl-5 font-light text-sm sm:text-base">
+                  <li>Familiarity with Mariana Tek software is an asset.</li>
+                  <li>Previous leadership experience is an advantage.</li>
+                  <li>
+                    Exceptional customer service and interpersonal skills
+                    required.
+                  </li>
+
+                  <li>Must be detail-oriented, organized, and proactive.</li>
+
+                  <li>
+                    Strong communication skills and ability to collaborate with
+                    team members, clients, and management.
+                  </li>
+
+                  <li>Comfortable lifting or moving items up to 50 lbs.</li>
+                </ul>
               </div>
             </div>
 
             <div className="w-full flex items-center justify-center lg:justify-start mt-4 lg:mt-0">
               <img
-                src="/about2.jpg"
+                src="/about1.jpg"
                 alt="Lagree fitness"
-                className="object-center h-[300px] sm:h-[400px] md:h-[500px] w-full max-w-md lg:max-w-none"
+                className="object-cover h-[300px] sm:h-[400px] md:h-[500px] w-full max-w-md lg:max-w-none"
               />
             </div>
           </div>
 
           {/* Second section with dates and details */}
-          <div className="flex flex-col justify-start items-start px-4 sm:px-6 md:px-8 lg:px-16 gap-5 md:gap-8 w-full md:mt-0 mt-8">
-            <p className="text-base sm:text-lg md:text-xl font-medium leading-tight">
-              <strong>KEY RESPONSIBILITIES</strong>
+          <div className="flex flex-col justify-start items-start px-4 sm:px-6 md:px-8 lg:px-16 gap-5 md:gap-8 w-full mt-8 md:mt-12 lg:mt-20">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
+              <strong>Primary Responsibilities</strong>
             </p>
 
-            <ul className="list-disc pl-5 flex flex-col gap-3 font-light text-sm sm:text-base">
+            <ul className="list-disc pl-5 font-light text-sm sm:text-base">
               <li>
-                Greet and engage clients in a positive and friendly manner
+                Welcome clients with a positive, friendly attitude, creating a
+                warm and inviting atmosphere.
               </li>
               <li>
-                Provide the highest level of client/customer service and
-                hospitality to all clients/prospective clients
+                Provide exceptional customer service and hospitality to both
+                current and prospective clients.
               </li>
               <li>
-                Share pricing and class information with prospective clients
+                Communicate class options, pricing, and membership details to
+                potential clients.
               </li>
-              <li>Deliver Megaformer machine demos to new clients</li>
-              <li>Complete studio tours with new clients</li>
-              <li>
-                Work alongside and support LW instructors to ensure a successful
-                and seamless client check-in and class experience
-              </li>
-              <li>Ensure complete knowledge of Mariana Tek system</li>
-              <li>
-                Assist Management with day-to-day operations of the studio
-              </li>
-              <li>
-                Ensure prompt response to studio emails; notify Studio Lead if
-                needed
-              </li>
-              <li>
-                Understand Lagree Eliteform product knowledge, policies and
-                procedures for retail operations
-              </li>
-              <li>Complete basic Megaformer machine maintenance</li>
-              <li>
-                Actively maintain studio cleanliness and organization between
-                each class so each client receives the best LW experience
-              </li>
-              <li>Assist in retail inventory at the end of the month</li>
 
-              <li>Complete opening and/or closing checklists</li>
+              <li>
+                Conduct Megaformer machine demonstrations for new clients.
+              </li>
 
-              <li>Perform other studio duties as needed</li>
+              <li>
+                Lead new clients on studio tours, showcasing the Lagree West
+                experience.
+              </li>
+
+              <li>
+                Collaborate with instructors to ensure a smooth check-in and
+                class transition for clients.
+              </li>
+
+              <li>
+                Develop thorough knowledge of the Mariana Tek booking system.
+              </li>
+
+              <li>
+                Support day-to-day studio operations as directed by studio
+                management.
+              </li>
+
+              <li>
+                Respond to studio emails promptly; escalate concerns to the
+                Studio Lead when needed.
+              </li>
+
+              <li>
+                Maintain understanding of Lagree West products, policies, and
+                retail procedures.
+              </li>
+
+              <li>Perform routine maintenance on Megaformer machines.</li>
+
+              <li>
+                Keep the studio clean and organized between classes to ensure a
+                premium client experience.
+              </li>
+
+              <li>Assist with monthly retail inventory checks.</li>
+
+              <li>Carry out studio opening and/or closing procedures.</li>
+
+              <li>
+                Take on additional duties as needed to support studio
+                operations.
+              </li>
             </ul>
 
-            <p className="text-base sm:text-lg md:text-xl font-medium leading-tight">
-              <strong>QUALIFICATIONS</strong>
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
+              <strong>Work Requirements</strong>
             </p>
-            <ul className="list-disc flex flex-col gap-3 pl-5 font-light text-sm sm:text-base">
-              <li>Mariana Tek software experience a plus</li>
-              <li>Leadership experience a plus</li>
-              <li>Must have superior customer service skills</li>
-              <li>
-                Must have excellent interpersonal skills and a service-oriented
-                outlook
-              </li>
-              <li>Must be highly organized</li>
-              <li>Ability to work independently as well as on a team</li>
-              <li>
-                Should have a strong ability to communicate clearly with team
-                members, clients and senior management
-              </li>
-              <li>
-                Must be able to move and/or lift heavy items, up to 50 lbs.
-              </li>
-            </ul>
 
-            <p className="text-base sm:text-lg md:text-xl font-medium leading-tight">
-              <strong>QUALIFICATIONS</strong>
-            </p>
-            <ul className="list-disc flex flex-col gap-1 pl-5 font-light text-sm sm:text-base">
+            <ul className="list-disc pl-5 font-light text-sm sm:text-base">
               <li>
-                Must be available to work:
-                <ul className="list-disc flex flex-col gap-1 pl-5 font-light text-sm sm:text-base">
-                  <li>12 hours per week, 2-3 shifts</li>
-                  <li>
-                    Ability to work flexible hours; early morning/late night/
-                    weekends
-                  </li>
-                  <li>Some holidays (open year-round)</li>
-                </ul>
+                Must be available for at least 12 hours per week (2–3 shifts).
               </li>
+              <li>
+                Flexible availability including early mornings, evenings,
+                weekends, and some holidays.
+              </li>
+              <li>Year-round availability expected.</li>
             </ul>
 
             <div className="w-full flex justify-center sm:justify-start my-4">
-              <button className="bg-none border border-black text-black hover:bg-black hover:text-white py-3 px-6 sm:px-12 md:px-20 lg:px-28 font-medium transition-colors duration-300 w-full sm:w-auto">
-                Apply Here
-              </button>
+              <a
+                href="mailto:setarehkopahi@gmail.com?subject=Job%20Application%20for%20Guest%20Experience%20Member"
+                className="w-full sm:w-auto"
+              >
+                <button className="bg-none border border-black text-black hover:bg-black hover:text-white py-3 px-6 sm:px-12 md:px-20 lg:px-28 font-medium transition-colors duration-300 w-full sm:w-auto">
+                  Apply Here
+                </button>
+              </a>
             </div>
           </div>
         </div>

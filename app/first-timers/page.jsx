@@ -33,12 +33,12 @@ const FirstTimers = () => {
           </div>
         </div>
       </div>{" "}
-      <div className="bg-black py-16 md:py-28">
+      <div className="bg-white py-16 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
           <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0">
             {/* Title Section */}
             <div className="md:col-span-1">
-              <h3 className="text-2xl sm:text-3xl md:text-5xl text-white font-semibold mb-6">
+              <h3 className="text-2xl sm:text-3xl md:text-5xl text-black font-semibold mb-6">
                 First Time <br />
                 Special Offers
               </h3>
@@ -46,13 +46,13 @@ const FirstTimers = () => {
 
             {/* Vancouver Offer */}
             <div className="md:col-span-1 flex flex-col gap-6 md:gap-8">
-              <p className="text-xl text-white font-bold mb-2">
+              <p className="text-xl text-black font-bold mb-2">
                 First Class Vancouver
               </p>
-              <p className="text-white font-medium mb-2">
+              <p className="text-black font-medium mb-2">
                 <strong>2 Week Intro Pass</strong> — $99
               </p>
-              <p className="text-gray-300 mb-6 text-sm sm:text-base">
+              <p className="text-gray-700 mb-6 text-sm sm:text-base">
                 Expires 14 days from date of first class. Max 1{" "}
                 <br className="hidden sm:block" /> class/day. Check pricing page
                 for additional new client offers.
@@ -61,7 +61,7 @@ const FirstTimers = () => {
                 <Link
                   href="/pricing"
                   target="_blank"
-                  className="inline-block w-full sm:w-auto px-12 sm:px-20 md:px-28 py-6 sm:py-8 bg-white text-black font-medium text-center hover:bg-gray-200 transition-colors"
+                  className="inline-block w-full sm:w-auto px-12 sm:px-20 md:px-28 py-6 sm:py-8 bg-black text-white font-medium text-center transition-colors"
                 >
                   BUY HERE
                 </Link>
@@ -71,7 +71,7 @@ const FirstTimers = () => {
         </div>
       </div>
       {/* second bg-black */}
-      <div className="bg-black pb-16 md:pb-28">
+      <div className="bg-black py-16 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
           <div className="flex flex-col md:flex-row gap-12 md:gap-40 justify-between">
             {/* Title Section */}
@@ -130,7 +130,7 @@ const FirstTimers = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black py-16 md:py-28">
+      <div className="bg-white text-black py-16 md:py-28">
         <div className="container mx-auto px-4 sm:px-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-28">
             {/* Image container */}
@@ -146,9 +146,11 @@ const FirstTimers = () => {
 
             <div className="w-full flex flex-col gap-12 md:gap-24">
               <div className="flex flex-col">
-                <p className="text-lg sm:text-xl">Take The First Step</p>
+                <p className="text-lg text-black sm:text-xl">
+                  Take The First Step
+                </p>
 
-                <p className="text-3xl sm:text-4xl md:text-5xl text-white font-medium leading-tight">
+                <p className="text-3xl sm:text-4xl md:text-5xl text-black font-medium leading-tight">
                   <strong>
                     Ready to try for <br className="hidden sm:block" />{" "}
                     yourself?
@@ -157,7 +159,7 @@ const FirstTimers = () => {
               </div>
               <div className="">
                 <Link href={"/schedule"}>
-                  <button className="w-full sm:w-auto bg-white text-black py-4 sm:py-6 px-8 sm:px-16 md:px-28 font-medium">
+                  <button className="w-full sm:w-auto bg-black text-white py-4 sm:py-6 px-8 sm:px-16 md:px-28 font-medium">
                     Book Vancouver
                   </button>
                 </Link>
