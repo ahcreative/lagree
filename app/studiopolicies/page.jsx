@@ -1,61 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 
 const About = () => {
-  const [openClass, setOpenClass] = useState(null);
-  const [activeSection, setActiveSection] = useState(1);
-
-  const toggleSection = (sectionId) => {
-    setActiveSection(sectionId);
-  };
-
-  const toggleClass = (className) => {
-    if (openClass === className) {
-      setOpenClass(null);
-    } else {
-      setOpenClass(className);
-    }
-  };
-
-  // Define content for each toggle section
-  const toggleSectionContent = {
-    1: {
-      title: "Springs",
-      description:
-        "The Megaformer uses springs for resistance. Spring tension allows a greater number of muscle fibres to be used throughout the range of motion and makes it difficult to plateau.",
-      image: "/springs.jpg",
-    },
-    2: {
-      title: "Carriage",
-      description:
-        "The Megaformer carriage is designed to move smoothly between exercises, providing stability while allowing dynamic movement patterns that engage your core throughout the workout.",
-      image: "/meet-the-mega.jpg",
-    },
-    3: {
-      title: "Handlebars",
-      description:
-        "Multiple handlebars positioned throughout the machine provide stability and leverage points, allowing for various grips and positions to target different muscle groups.",
-      image: "/handlebars.jpg",
-    },
-    4: {
-      title: "Cables",
-      description:
-        "The cable system allows for resistance training through multiple planes of motion, creating balanced strength and targeting muscles from different angles.",
-      image: "/cables.jpg",
-    },
-    5: {
-      title: "Platform",
-      description:
-        "The non-slip platform provides secure footing during exercises, with multiple hand and foot positions marked for proper form and alignment.",
-      image: "/platform.jpg",
-    },
-  };
-
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       <div className="relative h-screen flex flex-col justify-center items-center w-full overflow-hidden">

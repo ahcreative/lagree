@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Footer from "../components/footer";
-import Link from "next/link";
 import Header from "../components/header";
 
 const HomePage = () => {

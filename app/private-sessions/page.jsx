@@ -1,10 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Community = () => {
   return (

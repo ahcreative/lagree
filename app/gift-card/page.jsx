@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Link from "next/link";
 
 const FirstTimers = () => {
   return (
