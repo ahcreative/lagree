@@ -59,7 +59,7 @@ const About = () => {
             <span className="font-medium">
               the doors may be locked 5 minutes after class begins.
             </span>{" "}
-            If the door is unlocked, (as long as it's not 1st class)you're
+            If the door is unlocked, (as long as it's not 1st class) you're
             welcome to join, but please be mindful of the class in progress and
             avoid knocking or causing any disruptions. After the 5-minute
             cutoff, any no-shows will result in your spot being given to someone

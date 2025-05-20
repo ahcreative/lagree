@@ -2,33 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
-import Header from "../components/header";
+import HeaderWhite from "../components/headerWhite";
 
 const FirstTimers = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="relative h-screen w-full overflow-hidden">
-        <Header />
-
-        <img
-          src="/contactbanner.jpg"
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          alt="Banner background"
-        />
-        {/* Content Section - Made responsive with better margins */}
-        <div className="relative z-20 h-full flex items-center">
-          <div className="container mx-auto px-4 sm:px-6 md:px-12">
-            <div className="ml-4 sm:ml-8 md:ml-20 mt-5 flex flex-col gap-6 md:gap-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-semibold">
-                Gift Cards{" "}
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeaderWhite />
 
       {/* Main content section - Made responsive with better spacing */}
-      <div className="bg-black py-16 md:py-20 lg:py-28">
+      <div className="bg-black py-34 lg:py-44">
         <div className="container mx-auto px-6 md:px-10">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-20">
             {/* Image container - Full width on mobile, half on desktop */}

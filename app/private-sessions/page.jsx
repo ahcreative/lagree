@@ -2,36 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
-import Header from "../components/header";
+import HeaderWhite from "../components/headerWhite";
 
 const Community = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="relative h-screen flex flex-col w-full overflow-hidden">
-        <Header />
+      <HeaderWhite />
 
-        <img
-          src="/cover3.png"
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          alt=""
-        />
-        {/* Content Section */}
-        <div className="relative bg-black opacity-50 z-10 w-full h-screen"></div>
-
-        <div className="absolute z-20 h-full flex items-center">
-          <div className="container mx-auto px-4 sm:px-6 md:px-12">
-            <div className="px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col gap-6 md:gap-10">
-              <h1
-                className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-semibold mb-4 md:mb-6`}
-              >
-                Private Sessions
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>{" "}
-      <div className="bg-white text-black py-12 sm:py-16 md:py-20 lg:py-28">
-        <div className="container mx-auto flex flex-col md:flex-row items-start justify-start px-4 sm:px-6 md:px-10">
+      <div className="bg-white text-black py-34 lg:py-44">
+        <div className="container mx-auto flex flex-col md:flex-row gap-10 items-start justify-start px-4 sm:px-6 md:px-10">
           {/* Image container - Full width on mobile, half width on larger screens */}
           <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">
             <Image

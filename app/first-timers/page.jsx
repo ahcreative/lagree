@@ -110,21 +110,6 @@ const FirstTimers = () => {
                   For both safety and hygiene. Bring your own or purchase in
                   studio.
                 </p>
-
-                <p className="text-lg sm:text-xl text-white font-bold mb-2">
-                  Brownie Points
-                </p>
-                <p className="text-white font-light">
-                  Get ahead of the game by watching our machine orientation:{" "}
-                  <Link
-                    href="https://vimeo.com/919358793"
-                    target="_blank"
-                    className="underline hover:text-gray-300"
-                  >
-                    here
-                  </Link>
-                  .
-                </p>
               </div>
             </div>
           </div>
