@@ -108,8 +108,7 @@ const HomePage = () => {
                 The Science
               </p>
               <h1 className="font-bold text-2xl md:text-3xl">
-                We target your
-                <br /> slow-twitch muscle fibers.
+                We target your slow-twitch muscle fibers.
               </h1>
               <div className="flex flex-col gap-1">
                 <p className="text-sm sm:text-base md:text-lg">
