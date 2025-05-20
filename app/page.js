@@ -55,15 +55,12 @@ const HomePage = () => {
         <div className=" mx-auto flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10 gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="flex flex-col justify-center w-full">
-            <div className="flex flex-col gap-6 text-center md:text-left">
+            <div className="flex flex-col gap-2  text-center md:text-left">
               <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl">
                 LAGREE FAN{" "}
                 <span className="italic text-[#C8B682]">SOFIA VERGARA</span> AND
-                FOUNDER
-                <br />
-                <span className="italic text-[#C8B682]">
-                  SEBASTIEN LAGREE
-                </span>{" "}
+                FOUNDER{" "}
+                <span className="italic text-[#C8B682]">SEBASTIEN LAGREE</span>{" "}
                 CHAT
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-700">
@@ -128,14 +125,14 @@ const HomePage = () => {
       </div>
 
       {/* Results Section */}
-      <div className="bg-white text-black py-12 md:py-20 lg:py-28">
+      <div className="bg-white text-black py-12 md:py-20 lg:py-28 ">
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10 gap-8 md:gap-4">
-          <div className="flex flex-col justify-center items-center  w-full">
-            <div className="flex flex-col justify-center items-center  gap-6 md:gap-8 ">
-              <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-6xl">
+          <div className="flex flex-col justify-center items-center w-full">
+            <div className="flex flex-col justify-start items-start gap-2 ">
+              <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-6xl ">
                 Where results <br className="hidden sm:block" /> meet precision
               </h1>
-              <p className="text-sm sm:text-base md:text-lg max-w-full md:pl-0 lg:pl-[8.9rem]">
+              <p className="text-sm sm:text-base md:text-lg max-w-lg  ">
                 Our full-body, low-impact workout delivers the results
                 you&apos;re after—safely and effectively.
               </p>
