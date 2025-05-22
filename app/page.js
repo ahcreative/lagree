@@ -28,29 +28,31 @@ const HomePage = () => {
         <div className="bg-black absolute opacity-40 z-20 h-screen w-full flex items-center"></div>
 
         {/* Hero Content */}
-        <div className="relative z-20 h-full flex justify-center items-center w-full">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12">
-            <div className="m flex flex-col gap-6 md:gap-8 md:justify-end md:items-end">
-              <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white font-semibold mb-4 md:mb-6">
-                Welcome to <br /> Lagree Eliteform
-              </h1>
+        {headerVisible && (
+          <div className="relative z-20 h-full flex justify-center items-center w-full">
+            <div className="container mx-auto px-4 md:px-6 lg:px-12">
+              <div className="m flex flex-col gap-6 md:gap-8 md:justify-end md:items-end">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white font-semibold mb-4 md:mb-6">
+                  Welcome to <br /> Lagree Eliteform
+                </h1>
 
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-8">
-                <Link href="/schedule" className="w-full sm:w-auto">
-                  <button className="px-6 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 md:py-5 lg:py-6 bg-white text-black font-medium hover:bg-gray-100 transition duration-300 w-full text-sm sm:text-base">
-                    Book a Class
-                  </button>
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-8">
+                  <Link href="/schedule" className="w-full sm:w-auto">
+                    <button className="px-6 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 md:py-5 lg:py-6 bg-white text-black font-medium hover:bg-gray-100 transition duration-300 w-full text-sm sm:text-base">
+                      Book a Class
+                    </button>
+                  </Link>
 
-                <Link href="/first-timers" className="w-full sm:w-auto">
-                  <button className="px-6 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 md:py-5 lg:py-6 bg-white text-black font-medium hover:bg-gray-100 transition duration-300 w-full text-sm sm:text-base">
-                    New? Start Here
-                  </button>
-                </Link>
+                  <Link href="/first-timers" className="w-full sm:w-auto">
+                    <button className="px-6 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 md:py-5 lg:py-6 bg-white text-black font-medium hover:bg-gray-100 transition duration-300 w-full text-sm sm:text-base">
+                      New? Start Here
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
       <div className="bg-white text-black py-12 md:py-20 lg:py-28">
         <div className=" mx-auto flex flex-col md:flex-row justify-center items-center px-4 sm:px-6 md:px-10 gap-12 lg:gap-16">
