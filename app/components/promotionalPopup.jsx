@@ -13,7 +13,7 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
     }, 1500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [setHeaderVisible]);
 
   useEffect(() => {
     if (isOpen) {
@@ -44,9 +44,9 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
 
   return (
     <div
-      className={` inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 transition-opacity duration-300 p-4   ${animationClass}`}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-transparent transition-opacity duration-300 p-4 md:p-0 ${animationClass}`}
     >
-      <div className="relative bg-white w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl max-h-screen  transform transition-transform duration-300">
+      <div className="relative bg-transparent w-full max-w-4xl  overflow-hidden md:max-w-full max-h-screen transform transition-transform duration-300">
         <button
           onClick={closePopup}
           className="absolute top-4 right-4 z-30 bg-black bg-opacity-20 hover:bg-opacity-40 text-white rounded-full p-2 transition duration-300"
@@ -68,27 +68,38 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
           </svg>
         </button>
 
-        <div className="overflow-y-auto max-h-screen">
+        <div
+          className="overflow-y-auto max-h-screen  scrollbar-hide"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          <style jsx>{`
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
           <div className="relative flex flex-col lg:flex-row min-h-screen">
             <div className="block lg:hidden w-full h-64 relative">
               <img
                 src="/new.jpg"
                 alt="Promo"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
 
             <div
-              className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90 w-screen"
               style={{ backgroundImage: "url('/new.jpg')" }}
             ></div>
 
-            <div className="relative z-20 w-full flex items-center min-h-screen py-8">
-              <div className="w-full lg:w-1/2 p-2 md:p-8 lg:p-12">
-                <div className="bg-black bg-opacity-30 backdrop-blur-sm rounded-lg p-6 md:p-8">
+            <div className="relative z-20 w-full bg-transparent flex items-center min-h-screen md:py-8">
+              <div className="w-full lg:w-1/2 bg-transparent  md:p-8 lg:p-12">
+                <div className="bg-black bg-opacity-50 backdrop-blur-md rounded-lg p-8 md:p-8 border border-white border-opacity-20">
                   <div className="h-1 bg-[#C8B682] mb-6"></div>
 
-                  <h2 className="text-xl md:text-3xl  font-bold text-white mb-4 flex items-center">
+                  <h2 className="text-xl md:text-3xl font-bold text-white mb-4 flex items-center">
                     <span className="text-xl md:text-4xl mr-3">🎉</span>
                     <span>Grand Opening Special!</span>
                   </h2>
@@ -100,7 +111,7 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
                     journey.
                   </p>
 
-                  <div className="bg-white bg-opacity-20 backdrop-blur-sm p-4 md:p-6 rounded-lg text-center mb-6">
+                  <div className="bg-white bg-opacity-80 backdrop-blur-sm p-4 md:p-6 rounded-lg text-center mb-6">
                     <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-black mb-2">
                       Enjoy <span className="text-[#C8B682]">15% OFF</span>
                     </h3>
