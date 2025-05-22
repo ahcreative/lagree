@@ -3,7 +3,7 @@ import React from "react";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 
-const Community = () => {
+const FrontOfHouse = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden w-full">
       <div className="relative h-[100px] overflow-hidden">
@@ -165,4 +165,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default FrontOfHouse;

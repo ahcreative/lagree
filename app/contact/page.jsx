@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
-const HomePage = () => {
+const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       <div className="relative flex flex-col justify-start text-start items-start h-screen w-full overflow-hidden">
@@ -153,4 +153,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Contact;

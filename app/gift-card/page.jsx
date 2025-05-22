@@ -4,7 +4,7 @@ import Image from "next/image";
 import Footer from "../components/footer";
 import HeaderWhite from "../components/headerWhite";
 
-const FirstTimers = () => {
+const GiftCards = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <HeaderWhite />
@@ -52,4 +52,4 @@ const FirstTimers = () => {
   );
 };
 
-export default FirstTimers;
+export default GiftCards;

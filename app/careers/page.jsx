@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import Link from "next/link";
 import HeaderWhite from "../components/headerWhite";
 
-const Community = () => {
+const Carrers = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden w-full">
       <HeaderWhite />
@@ -61,4 +61,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default Carrers;

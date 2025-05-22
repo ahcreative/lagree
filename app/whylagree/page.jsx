@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import { motion, AnimatePresence } from "framer-motion";
 import HeaderWhite from "../components/headerWhite";
 
-const About = () => {
+const WhyLagree = () => {
   const [openClass, setOpenClass] = useState(null);
   const toggleClass = (className) => {
     if (openClass === className) {
@@ -393,4 +393,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default WhyLagree;

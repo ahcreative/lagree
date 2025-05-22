@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/footer";
 import HeaderWhite from "../components/headerWhite";
 
-const FirstTimers = () => {
+const LoginAccount = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className=" h-screen w-full overflow-hidden">
@@ -34,4 +34,4 @@ const FirstTimers = () => {
   );
 };
 
-export default FirstTimers;
+export default LoginAccount;

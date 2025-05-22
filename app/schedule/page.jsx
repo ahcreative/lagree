@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/footer";
 import HeaderWhite from "../components/headerWhite";
 
-const FirstTimers = () => {
+const Schedule = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <HeaderWhite />
@@ -13,4 +13,4 @@ const FirstTimers = () => {
   );
 };
 
-export default FirstTimers;
+export default Schedule;

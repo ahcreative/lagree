@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
-const About = () => {
+const StudioPolicies = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       <div className="relative h-screen flex flex-col justify-center items-center w-full overflow-hidden">
@@ -199,4 +199,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default StudioPolicies;

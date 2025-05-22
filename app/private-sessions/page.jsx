@@ -4,7 +4,7 @@ import Image from "next/image";
 import Footer from "../components/footer";
 import HeaderWhite from "../components/headerWhite";
 
-const Community = () => {
+const PrivateSessions = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <HeaderWhite />
@@ -75,4 +75,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default PrivateSessions;
