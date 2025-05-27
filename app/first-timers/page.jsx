@@ -145,7 +145,7 @@ const FirstTimers = () => {
               <div className="">
                 <Link href={"/schedule"}>
                   <button className="w-full sm:w-auto bg-black text-white py-4 sm:py-6 px-8 sm:px-16 md:px-28 font-medium">
-                    Book Vancouver
+                    Reserve Your Reform
                   </button>
                 </Link>
               </div>

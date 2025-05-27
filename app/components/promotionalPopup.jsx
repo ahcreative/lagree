@@ -146,11 +146,18 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
 
                   <div className="border-t border-white border-opacity-30 pt-4">
                     <p className="text-center font-semibold text-white text-sm md:text-base">
+                      Only 20 spots left for Founding Members!
+                    </p>
+                    <p className="text-center font-semibold text-white text-sm md:text-base">
                       Offer valid for a limited time only
                     </p>
                     <p className="text-xs text-white text-opacity-70 mt-3 text-center">
                       All purchases are final. Credits are non-transferable and
                       expire based on the terms of the package.
+                    </p>
+
+                    <p className="text-xs text-white text-opacity-70 mt-3 text-center">
+                      Thanks, Setareh
                     </p>
                   </div>
                 </div>

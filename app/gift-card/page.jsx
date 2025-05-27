@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
 import HeaderWhite from "../components/headerWhite";
+import Link from "next/link";
 
 const GiftCards = () => {
   return (
@@ -39,9 +40,11 @@ const GiftCards = () => {
                 </p>
               </div>
               <div className="mt-2 md:mt-4">
-                <button className="bg-white text-black py-4 px-16 sm:py-5 sm:px-20 md:py-6 md:px-28 font-medium">
-                  Vancouver
-                </button>
+                <Link href={"/pricing"}>
+                  <button className="bg-white text-black py-4 px-16 sm:py-5 sm:px-20 md:py-6 md:px-28 font-medium">
+                    Vancouver
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

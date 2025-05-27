@@ -33,7 +33,7 @@ const HomePage = () => {
             <div className="container mx-auto px-4 md:px-6 lg:px-12">
               <div className="m flex flex-col gap-6 md:gap-8 md:justify-end md:items-end">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white font-semibold mb-4 md:mb-6">
-                  Welcome to <br /> Lagree Eliteform
+                  Welcome to <br /> Lagree EliteForm
                 </h1>
 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-8">
