@@ -1,0 +1,23 @@
+{
+  "name": "Lagree Pulse",
+  "short_name": "Lagree Pulse",
+  "description": "Experience next-level fitness with Lagree Pulse's cutting-edge equipment.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
