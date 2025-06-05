@@ -21,8 +21,12 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:underline" target="_blank">
-                      Packages/Buy
+                    <Link
+                      href="/terms-and-condition"
+                      className="hover:underline"
+                      target="_blank"
+                    >
+                      Terms and Conditions
                     </Link>
                   </li>
                   <li>
@@ -101,7 +105,7 @@ const Footer = () => {
         {/* Copyright & Land Acknowledgment */}
         <div className="mt-6 md:mt-8 space-y-3 md:space-y-4">
           <p className="text-xs md:text-sm">
-            © Lagree Eliteform Fitness Ltd., All right reserved.
+            © Lagree Pulse Fitness Ltd., All right reserved.
           </p>
         </div>
       </div>

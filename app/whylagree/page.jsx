@@ -23,15 +23,13 @@ const WhyLagree = () => {
       </div>
 
       <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-48  pt-34 pb-10 ">
-        <h1 className="text-3xl md:text-4xl font-bold">
-          ABOUT LAGREE ELITEFORM
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-bold">ABOUT LAGREE PULSE</h1>
         <p className="text-base md:text-lg font-light">
           We are proud to bring Vancouver the cutting edge of fitness with the
           transformative Lagree Method, created by Sebastien Lagree. At Lagree
-          EliteForm, we deliver a high-intensity, low-impact, full-body workout
-          that fuses strength training, core engagement, muscle endurance,
-          cardio, and deep stretching into an effective 45-minute experience.
+          Pulse, we deliver a high-intensity, low-impact, full-body workout that
+          fuses strength training, core engagement, muscle endurance, cardio,
+          and deep stretching into an effective 45-minute experience.
         </p>
         <p className="text-base md:text-lg font-light">
           We are the only Lagree studio in Vancouver equipped with the latest
@@ -47,7 +45,7 @@ const WhyLagree = () => {
           overall client experience.
         </p>
         <p className="text-base md:text-lg font-light">
-          Experience the evolution of fitness at Lagree EliteForm—where strength
+          Experience the evolution of fitness at Lagree Pulse where strength
           meets precision, and form is everything.
         </p>
       </div>
@@ -171,7 +169,7 @@ const WhyLagree = () => {
                           <p className="mb-2 text-white text-base md:text-lg">
                             This full-body workout on the Megaformer is designed
                             to build strength, enhance flexibility, and boost
-                            endurance. With only 15 people per class, you’ll get
+                            endurance. With only 15 people per class, you'll get
                             the attention you deserve and the burn you came for.
                             Expect dynamic moves, deep muscle engagement, and
                             the kind of sweat that feels oh-so-satisfying.
@@ -274,7 +272,7 @@ const WhyLagree = () => {
                             is packed with slower, longer moves, heavier
                             springs, and bold variations that hit differently—in
                             the best way. Designed for those who love a sweaty
-                            grind, thrive on intensity, and don’t mind getting a
+                            grind, thrive on intensity, and don't mind getting a
                             little uncomfortable. No requirements—just show up,
                             dig deep, and let your strength surprise you.
                           </p>

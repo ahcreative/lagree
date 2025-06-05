@@ -42,7 +42,7 @@ const PrivateSessions = () => {
               <p className="text-base sm:text-lg">
                 *Tier is based on trainer's level of experience and
                 certifications. Some trainers' rates may vary.{" "}
-                <a href="mailto:info@lagreeeliteform.com" className="underline">
+                <a href="mailto:info@lagreepulse.com" className="underline">
                   Email
                 </a>{" "}
                 us with your preferred date(s), time(s), location(s), and
@@ -60,7 +60,7 @@ const PrivateSessions = () => {
               </p>
 
               <div className="mt-4">
-                <a href="mailto:info@lagreeeliteform.com">
+                <a href="mailto:info@lagreepulse.com">
                   <button className="bg-black uppercase text-white py-3 sm:py-4 md:py-6 px-8 sm:px-16 md:px-24 lg:px-32 font-medium self-start">
                     vancouver
                   </button>

@@ -21,26 +21,17 @@ const poppins = Poppins({
 
 // For metadata
 export const metadata = {
-  title: "Lagree EliteForm",
+  title: "Lagree Pulse",
   description:
-    "Official website for Lagree EliteForm — innovative fitness equipment and training solutions.",
-  keywords: [
-    "Lagree",
-    "EliteForm",
-    "Fitness Equipment",
-    "Lagree Method",
-    "Strength Training",
-    "Home Gym",
-  ],
-  authors: [
-    { name: "Lagree EliteForm Team", url: "https://lagreeeliteform.com" },
-  ],
+    "Official website for Lagree Pulse — innovative fitness equipment and training solutions.",
+  keywords: ["Lagree", "Pulse", "Fitness", "Workout"],
+  authors: [{ name: "Lagree Pulse Team", url: "https://lagreepulse.com" }],
   openGraph: {
-    title: "Lagree EliteForm",
+    title: "Lagree Pulse",
     description:
-      "Experience next-level fitness with Lagree EliteForm's cutting-edge equipment.",
-    url: "https://lagreeeliteform.com",
-    siteName: "Lagree EliteForm",
+      "Experience next-level fitness with Lagree Pulse's cutting-edge equipment.",
+    url: "https://lagreepulse.com",
+    siteName: "Lagree Pulse",
     type: "website",
   },
 };
@@ -53,7 +44,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`} antialiased`}>
+      <body className={` antialiased`}>
         <Toaster position="top-center" reverseOrder={false} />
         {children}
         <SpeedInsights />

@@ -31,10 +31,10 @@ const StudioPolicies = () => {
 
       <div className="bg-white text-black flex flex-col gap-5 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-48 py-10 md:py-20 max-w-full">
         <h1 className="text-sm sm:text-lg font-light">
-          <span className="font-bold">Welcome to Lagree EliteForm! </span>We're
-          so excited to have you join our community. Please take a moment to
-          review our studio policies to ensure a smooth and enjoyable experience
-          for everyone.
+          <span className="font-bold">Welcome to Lagree Pulse! </span>We're so
+          excited to have you join our community. Please take a moment to review
+          our studio policies to ensure a smooth and enjoyable experience for
+          everyone.
         </h1>
         <div className="flex flex-col gap-1">
           <h1 className="text-xl sm:text-2xl font-bold">Arrival Time</h1>
@@ -180,16 +180,16 @@ const StudioPolicies = () => {
             Booking & Managing Your Account
           </h1>
           <p className="text-sm sm:text-lg font-light">
-            We recommend downloading our Lagree EliteForm App (available on
-            Apple and Android) to easily manage your bookings, cancellations,
-            and account details.
+            We recommend downloading our Lagree Pulse App (available on Apple
+            and Android) to easily manage your bookings, cancellations, and
+            account details.
           </p>
           <p className="text-sm sm:text-lg font-light">
             All class packs have a 3-month expiration date from purchase.
           </p>
           <p className="text-sm sm:text-lg font-light">
             If you have any questions or need assistance, feel free to reach out
-            to us at info@lagreeeliteform.com. Please note that we are no longer
+            to us at info@lagreepulse.com. Please note that we are no longer
             reachable by phone.
           </p>
         </div>

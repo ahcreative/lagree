@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
-import Header from "@/app/components/header";
+import Header from "@/app/components/headerWhite";
 import Footer from "@/app/components/footer";
 
 const FrontOfHouse = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden w-full">
-      <div className="relative h-[100px] overflow-hidden">
+      <div className="relative  overflow-hidden">
         <Header />
       </div>
 
-      <div className="bg-white text-black py-8 md:py-16 lg:py-28">
+      <div className="bg-white text-black py-28 md:py-44 ">
         <div className="container mx-auto flex flex-col items-center px-4 sm:px-6 md:px-10">
           {/* First section with image */}
           <div className="flex flex-col lg:flex-row w-full gap-8 md:gap-12 lg:gap-16">

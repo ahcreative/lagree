@@ -2,13 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import Footer from "../components/footer";
-import HeaderWhite from "../components/headerWhite";
+import Header from "../components/header";
 import Link from "next/link";
 
 const GiftCards = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <HeaderWhite />
+      <Header />
 
       {/* Main content section - Made responsive with better spacing */}
       <div className="bg-black py-34 lg:py-44">
