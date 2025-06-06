@@ -16,7 +16,7 @@ const HomePage = () => {
         {headerVisible && <Header />}
 
         <video
-          src="/fitness.mp4"
+          src="/fitness.webm"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           autoPlay
           loop
