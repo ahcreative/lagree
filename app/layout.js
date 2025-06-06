@@ -1,23 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import { Poppins } from "next/font/google"; // <-- Add this
 import { Toaster } from "react-hot-toast";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // Optional: customize as needed
-});
+import LoadingScreen from "./components/LoadingScreen";
 
 // For metadata
 export const metadata = {
@@ -44,7 +28,8 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>
+      <body className={`antialiased`}>
+        <LoadingScreen />
         <Toaster position="top-center" reverseOrder={false} />
         {children}
         <SpeedInsights />

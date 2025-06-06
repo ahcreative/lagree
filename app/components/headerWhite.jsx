@@ -210,8 +210,8 @@ function Header() {
           {/* Logo */}
           <Link href={"/"}>
             <div className="flex gap-2 items-center">
-              <img src="/icon.png" className="h-14 md:h-18" alt="" />
-              <img src="/logo.png" className="h-14 md:h-18" alt="" />
+              <img src="/icon.png" className="h-10 md:h-14" alt="" />
+              <img src="/logo.png" className="h-10 md:h-14" alt="" />
             </div>
           </Link>
 
