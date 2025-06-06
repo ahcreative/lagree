@@ -22,6 +22,8 @@ const HomePage = () => {
           loop
           muted
           playsInline
+          preload="none"
+          loading="lazy"
         />
 
         {/* Overlay */}
@@ -97,7 +99,9 @@ const HomePage = () => {
               className="object-cover w-full max-w-md h-auto rounded-lg shadow-md"
               width={500}
               height={200}
-              priority
+              priority={false}
+              loading="lazy"
+              quality={75}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start w-full ">
@@ -144,7 +148,9 @@ const HomePage = () => {
               className="object-cover w-full max-w-md h-auto rounded-lg shadow-md"
               width={500}
               height={200}
-              priority
+              priority={false}
+              loading="lazy"
+              quality={75}
             />
           </div>
         </div>
