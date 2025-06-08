@@ -4,26 +4,8 @@ import { Menu, X, ChevronLeft, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(""); // tracks which submenu is open
-  const [selectedRegion, setSelectedRegion] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -47,15 +29,21 @@ function Header() {
     setActiveSubmenu(activeSubmenu === submenuName ? "" : submenuName);
   };
 
+  // Handle mobile submenu item clicks
+  const handleMobileSubmenuItemClick = () => {
+    setIsMobileMenuOpen(false);
+    setActiveSubmenu("");
+  };
+
   const renderDesktopSubmenu = (submenuType) => {
     const baseClasses =
-      "absolute top-full left-0 mt-2 bg-white w-full  justify-center items-center flex flex-col text-black min-w-[250px] p-4 shadow-lg  z-50";
+      "absolute top-full left-0 mt-2 bg-white flex flex-col w-full text-black justify-center items-center min-w-[250px] p-4 shadow-lg  z-50";
 
     switch (submenuType) {
       case "studio":
         return (
           <div className={baseClasses}>
-            <h3 className="text-lg font-bold mb-3 w-full  justify-center items-center flex flex-col border-b pb-2">
+            <h3 className="text-lg w-full  justify-center items-center flex flex-col  font-bold mb-3 border-b pb-2">
               Studio Overview
             </h3>
             <div className="space-y-2">
@@ -90,7 +78,7 @@ function Header() {
       case "pricing":
         return (
           <div className={baseClasses}>
-            <h3 className="text-lg font-bold w-full  justify-center items-center flex flex-col mb-3 border-b pb-2">
+            <h3 className="text-lg w-full justify-center items-center flex flex-col  font-bold mb-3 border-b pb-2">
               Pricing Options
             </h3>
             <div className="space-y-2">
@@ -134,21 +122,31 @@ function Header() {
       case "studio":
         return (
           <div className={baseClasses}>
-            <a href="/whylagree" className="block text-gray-300 text-lg pl-4">
+            <a
+              href="/whylagree"
+              className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
+            >
               Why Lagree?
             </a>
             {/* <a
               href="/studio-photos"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Studio Photos
             </a> */}
-            {/* <a href="/first-timer" className="block text-gray-300 text-lg pl-4">
+            {/* <a 
+              href="/first-timer" 
+              className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
+            >
               First-Timer Info
             </a> */}
             <a
               href="/studiopolicies"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Studio Rules
             </a>
@@ -159,24 +157,31 @@ function Header() {
         return (
           <div className={baseClasses}>
             <a
-              href="/pricing/packages"
+              href="/pricing"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Class Packages
             </a>
             <a
               href="/private-sessions"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Private Sessions
             </a>
             <a
               href="/first-timers"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               First-Time Offers
             </a>
-            <a href="/gift-cards" className="block text-gray-300 text-lg pl-4">
+            <a
+              href="/gift-card"
+              className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
+            >
               Gift Cards
             </a>
           </div>
@@ -187,10 +192,15 @@ function Header() {
     }
   };
 
-  // Close submenu when clicking outside
+  // Close submenu when clicking outside (only for desktop)
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (activeSubmenu !== "" && !event.target.closest(".submenu-container")) {
+      // Only handle click outside for desktop (when mobile menu is not open)
+      if (
+        !isMobileMenuOpen &&
+        activeSubmenu !== "" &&
+        !event.target.closest(".submenu-container")
+      ) {
         setActiveSubmenu("");
       }
     };
@@ -199,7 +209,7 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [activeSubmenu]);
+  }, [activeSubmenu, isMobileMenuOpen]);
 
   return (
     <nav
@@ -296,13 +306,13 @@ function Header() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden fixed justify-center items-start inset-0 bg-black z-40 pt-[120px] overflow-y-auto">
-          <div className="flex flex-col space-y-6 justify-center items-center p-6">
+          <div className="flex flex-col justify-center items-center space-y-6 p-6">
             {/* Studio Overview */}
             <div className="flex flex-col">
               <a
                 href="#"
                 onClick={(e) => handleSubmenuClick("studio", e)}
-                className="text-white text-2xl hover:text-gray-300 transition flex items-center justify-center"
+                className="text-white text-2xl hover:text-gray-300 transition flex items-center justify-between"
               >
                 Studio Overview
               </a>
@@ -318,11 +328,11 @@ function Header() {
             </a> */}
 
             {/* Pricing */}
-            <div className="">
+            <div className="flex flex-col justify-center items-center">
               <a
                 href="#"
                 onClick={(e) => handleSubmenuClick("pricing", e)}
-                className="text-white text-2xl hover:text-gray-300 transition flex items-center justify-center"
+                className="text-white text-2xl hover:text-gray-300 transition flex flex-col items-center justify-center"
               >
                 Pricing
               </a>
@@ -345,13 +355,6 @@ function Header() {
               Contact
             </a>
 
-            <a
-              href="/login-account"
-              className="text-white text-2xl hover:text-gray-300 transition"
-            >
-              My Account
-            </a>
-
             {/* Mobile App */}
             <a
               href="/mobileapp"
@@ -361,6 +364,12 @@ function Header() {
             </a>
 
             {/* My Account */}
+            <a
+              href="/login-account"
+              className="text-white text-2xl hover:text-gray-300 transition"
+            >
+              My Account
+            </a>
           </div>
         </div>
       )}

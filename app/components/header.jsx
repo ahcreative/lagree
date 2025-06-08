@@ -47,6 +47,12 @@ function Header() {
     setActiveSubmenu(activeSubmenu === submenuName ? "" : submenuName);
   };
 
+  // Handle mobile submenu item clicks
+  const handleMobileSubmenuItemClick = () => {
+    setIsMobileMenuOpen(false);
+    setActiveSubmenu("");
+  };
+
   const renderDesktopSubmenu = (submenuType) => {
     const baseClasses =
       "absolute top-full left-0 mt-2 bg-white flex flex-col w-full text-black justify-center items-center min-w-[250px] p-4 shadow-lg  z-50";
@@ -134,21 +140,31 @@ function Header() {
       case "studio":
         return (
           <div className={baseClasses}>
-            <a href="/whylagree" className="block text-gray-300 text-lg pl-4">
+            <a
+              href="/whylagree"
+              className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
+            >
               Why Lagree?
             </a>
             {/* <a
               href="/studio-photos"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Studio Photos
             </a> */}
-            {/* <a href="/first-timer" className="block text-gray-300 text-lg pl-4">
+            {/* <a 
+              href="/first-timer" 
+              className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
+            >
               First-Timer Info
             </a> */}
             <a
               href="/studiopolicies"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Studio Rules
             </a>
@@ -159,24 +175,31 @@ function Header() {
         return (
           <div className={baseClasses}>
             <a
-              href="/pricing/packages"
+              href="/pricing"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Class Packages
             </a>
             <a
               href="/private-sessions"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               Private Sessions
             </a>
             <a
               href="/first-timers"
               className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
             >
               First-Time Offers
             </a>
-            <a href="/gift-cards" className="block text-gray-300 text-lg pl-4">
+            <a
+              href="/gift-card"
+              className="block text-gray-300 text-lg pl-4"
+              onClick={handleMobileSubmenuItemClick}
+            >
               Gift Cards
             </a>
           </div>
@@ -187,10 +210,15 @@ function Header() {
     }
   };
 
-  // Close submenu when clicking outside
+  // Close submenu when clicking outside (only for desktop)
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (activeSubmenu !== "" && !event.target.closest(".submenu-container")) {
+      // Only handle click outside for desktop (when mobile menu is not open)
+      if (
+        !isMobileMenuOpen &&
+        activeSubmenu !== "" &&
+        !event.target.closest(".submenu-container")
+      ) {
         setActiveSubmenu("");
       }
     };
@@ -199,7 +227,7 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [activeSubmenu]);
+  }, [activeSubmenu, isMobileMenuOpen]);
 
   return (
     <nav

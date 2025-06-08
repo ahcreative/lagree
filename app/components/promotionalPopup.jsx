@@ -44,7 +44,7 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-transparent transition-opacity duration-300 p-4 md:p-0 ${animationClass}`}
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-transparent transition-opacity duration-300 mt-10 md:mt-0 p-4 md:p-0 ${animationClass}`}
     >
       <div className="relative bg-transparent w-full max-w-4xl  overflow-hidden md:max-w-full max-h-screen transform transition-transform duration-300">
         <button
@@ -94,7 +94,7 @@ const PromotionalPopup = ({ setHeaderVisible }) => {
               style={{ backgroundImage: "url('/new.jpg')" }}
             ></div>
 
-            <div className="relative z-20 w-full bg-transparent flex items-center min-h-screen md:py-8">
+            <div className="relative z-20 w-full bg-transparent flex items-center  md:py-8">
               <div className="w-full lg:w-1/2 bg-transparent  md:p-8 lg:p-12">
                 <div className="bg-black bg-opacity-50 backdrop-blur-md rounded-lg p-8 md:p-8 border border-white border-opacity-20">
                   <div className="h-1 bg-[#C8B682] mb-6"></div>

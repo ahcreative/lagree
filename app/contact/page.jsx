@@ -34,8 +34,8 @@ const Contact = () => {
           <div className=" justify-center items-center w-full md:w-1/2">
             <div className="flex flex-col justify-center md:text-start items-center gap-2  md:pl-28">
               <p className="text-lg md:text-xl  ">Contact Lagree Pulse</p>
-              <p className="text-3xl sm:text-4xl md:text-6xl  font-medium leading-tight">
-                <strong>Vancouver</strong>
+              <p className="text-3xl sm:text-4xl md:text-5xl  font-medium leading-tight">
+                <strong>Downtown Vancouver</strong>
               </p>
             </div>
           </div>
