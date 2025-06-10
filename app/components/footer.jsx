@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 const Footer = () => {
@@ -108,7 +109,33 @@ const Footer = () => {
             © Lagree Pulse Fitness Ltd., All right reserved.
           </p>
         </div>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://marianatek.com/?ref_noscript" rel="nofollow">
+            Web Integrations by Mariana Tek.
+          </a>
+        </noscript>
       </div>
+
+      {/* Mariana Tek Web Integrations Script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              (function () {
+                // Set tenant name here
+                var TENANT_NAME = 'lagreepulse.sandbox';
+                var d = document;
+                var sA = ['polyfills', 'js'];
+                for (var i = 0; i < sA.length; i++) {
+                  var s = d.createElement('script');
+                  s.src = 'https://' + TENANT_NAME + '.marianaiframes.com/' + sA[i];
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                }
+              })();
+            `,
+        }}
+      ></script>
     </footer>
   );
 };
