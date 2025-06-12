@@ -529,10 +529,10 @@ const PrivacyPolicy = () => {
                   contact us:
                 </p>
                 <ul className="list-disc pl-5 mb-4 space-y-2">
-                  <li>By email: setarehkopahi@gmail.com</li>
+                  <li>By email: info@lagreepulse.com</li>
                   <li>
                     By visiting this page on our website:
-                    www.lagreepulse.com/privacypolicy
+                    https://www.lagreepulse.com/privacypolicy
                   </li>
                 </ul>
               </div>
