@@ -23,11 +23,11 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/terms-and-condition"
+                      href="/termsOfServices"
                       className="hover:underline"
                       target="_blank"
                     >
-                      Terms and Conditions
+                      Terms of Services
                     </Link>
                   </li>
                   <li>

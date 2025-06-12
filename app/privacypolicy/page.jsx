@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
             {/* Right side - Additional information */}
             <div className="w-full md:w-1/2 md:p-8 p-1">
               <div className="prose max-w-none text-black">
-                <p className="text-sm mb-4">Last updated: June 05, 2025</p>
+                <p className="text-sm mb-4">Last updated: June, 2025</p>
 
                 <p className="mb-4">
                   This Privacy Policy describes Our policies and procedures on
