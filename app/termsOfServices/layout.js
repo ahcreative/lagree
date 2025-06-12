@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "Terms and Conditions | Lagree Pulse",
+  title: "Terms of Services | Lagree Pulse",
   description:
-    "Read our terms and conditions to understand the rules, policies, and guidelines for using Lagree Pulse services and facilities.",
+    "Read our Terms of Services to understand the rules, policies, and guidelines for using Lagree Pulse services and facilities.",
   keywords: [
     "Lagree terms",
     "Lagree conditions",
@@ -12,14 +12,14 @@ export const metadata = {
     "Lagree rules",
   ],
   openGraph: {
-    title: "Terms and Conditions | Lagree Pulse",
+    title: "Terms of Services | Lagree Pulse",
     description:
       "Rules, policies, and guidelines for using Lagree Pulse services and facilities.",
-    url: "https://lagreepulse.com/terms-and-condition",
+    url: "https://lagreepulse.com/termsOfServices",
     type: "website",
   },
 };
 
-export default function TermsAndConditionLayout({ children }) {
+export default function TermsOfServicesLayout({ children }) {
   return children;
 }
